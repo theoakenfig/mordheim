@@ -143,7 +143,7 @@ She starts with 1 ritual chosen at random from the list over.</description>
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Heroines)" hidden="false" id="b24a-d029-3391-52a2" sortIndex="5" collapsible="false">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Heroines)" hidden="false" id="b24a-d029-3391-52a2" sortIndex="5" collapsible="true">
           <entryLinks>
             <entryLink import="true" name="Armour" hidden="false" id="ce5a-ad28-8958-928a" collective="false" targetId="ef2c-002f-6edc-0052" type="selectionEntryGroup" sortIndex="3"/>
             <entryLink import="true" name="Hand-to-hand Weapons" hidden="false" id="f2ec-2060-dcde-421d" collective="false" targetId="c729-8ae4-d466-1a08" type="selectionEntryGroup" sortIndex="1">
@@ -162,7 +162,6 @@ She starts with 1 ritual chosen at random from the list over.</description>
             <entryLink import="true" name="Missile Weapons" hidden="false" id="0385-f5c1-860e-454c" collective="false" targetId="8498-1d99-6ae4-6adf" type="selectionEntryGroup" sortIndex="2"/>
           </entryLinks>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="47a9-7a41-f482-b927-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="47a9-7a41-f482-b927-max" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
@@ -191,11 +190,51 @@ She starts with 1 ritual chosen at random from the list over.</description>
       <selectionEntryGroups>
         <selectionEntryGroup name="Skills" id="9107-0ead-9aa3-e53b" hidden="false" sortIndex="7">
           <entryLinks>
-            <entryLink import="true" name="Combat Skills" hidden="false" id="bcdd-88e5-646c-6e76" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" sortIndex="1"/>
-            <entryLink import="true" name="Academic Skills" hidden="false" id="01e8-bcd8-33fe-9f8b" collective="false" targetId="df9d-8724-d362-9d7c" type="selectionEntryGroup" sortIndex="2"/>
-            <entryLink import="true" name="Speed Skills" hidden="false" id="d7c9-c9fa-ee01-7069" collective="false" targetId="e134-0fdf-67a2-4684" type="selectionEntryGroup" sortIndex="3"/>
-            <entryLink import="true" name="Special Skills (Amazons Lustria)" hidden="false" id="b034-eb14-accb-95cd" collective="false" targetId="4fca-86ef-05c9-c013" type="selectionEntryGroup" sortIndex="4"/>
+            <entryLink import="true" name="Speed Skills" hidden="false" id="d7c9-c9fa-ee01-7069" collective="false" targetId="e134-0fdf-67a2-4684" type="selectionEntryGroup" sortIndex="5"/>
+            <entryLink import="true" name="Special Skills (Amazons Lustria)" hidden="false" id="b034-eb14-accb-95cd" collective="false" targetId="4fca-86ef-05c9-c013" type="selectionEntryGroup" sortIndex="6"/>
+            <entryLink import="true" name="Strength Skills" hidden="true" id="e978-7fe4-9672-779e" type="selectionEntryGroup" targetId="e5ac-cd5b-9057-e096" sortIndex="4"/>
+            <entryLink import="true" name="Shooting Skills" hidden="true" id="5176-a297-789e-0ce2" type="selectionEntryGroup" targetId="0073-d2d6-15c0-45b1" sortIndex="2"/>
+            <entryLink import="true" name="Combat Skills" hidden="false" id="addf-ac7f-2d3f-ff62" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" collapsible="true" sortIndex="1">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="f02d-acf0-616a-29b5" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Academic Skills" hidden="false" id="7547-7f01-7815-a42f" collective="false" targetId="df9d-8724-d362-9d7c" type="selectionEntryGroup" collapsible="true" sortIndex="3">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="2bea-96b7-1902-c279" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Alchemist’s notebook" hidden="true" id="614a-c80e-9abe-b07a" sortIndex="7">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cb00-a6d4-c9a3-6b2d"/>
+              </constraints>
+              <rules>
+                <rule name="(2 2 2 2 2) Alchemist’s Laboratory" id="8485-3411-b92d-68aa" hidden="false">
+                  <description>In the ruins you find loot worth 3D6 gc and a battered old notebook. One of your Heroes may study the Alchemist’s notebook, and the extra wisdom he gains will enable him to choose from Academic skills whenever he gains a new skill in addition to those skills normally available to him.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Training manual" hidden="true" id="d5cc-ae0d-82d5-bd95" sortIndex="8">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b03d-544d-7df5-dbcf"/>
+              </constraints>
+              <rules>
+                <rule name="(5 5 5 5 5 5) Fighting Arena" id="8f96-08ad-c5a3-9199" hidden="false">
+                  <description>You find a training manual, which you can either sell for 100 gc or let one of your Heroes read. The extra knowledge your Hero gleans from reading the manual entitles him to choose from Combat skills whenever he gains a new skill, and his WS may now be increased by an extra point above his normal racial maximum (for example, a Human who has the book would now have a maximum Weapon Skill of 7).</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -331,7 +370,7 @@ She starts with 1 ritual chosen at random from the list over.</description>
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Heroines)" hidden="false" id="930f-e743-09af-eab8" sortIndex="3">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Heroines)" hidden="false" id="930f-e743-09af-eab8" sortIndex="3" collapsible="true">
           <entryLinks>
             <entryLink import="true" name="Armour" hidden="false" id="dfd8-5728-8abb-e035" collective="false" targetId="ef2c-002f-6edc-0052" type="selectionEntryGroup" sortIndex="3"/>
             <entryLink import="true" name="Hand-to-hand Weapons" hidden="false" id="7822-f812-b20f-d3f4" collective="false" targetId="c729-8ae4-d466-1a08" type="selectionEntryGroup" sortIndex="1">
@@ -350,7 +389,6 @@ She starts with 1 ritual chosen at random from the list over.</description>
             <entryLink import="true" name="Missile Weapons" hidden="false" id="cf1f-d0a5-ee5d-76da" collective="false" targetId="8498-1d99-6ae4-6adf" type="selectionEntryGroup" sortIndex="2"/>
           </entryLinks>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="33a3-5fa6-7c9a-ee2b-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="33a3-5fa6-7c9a-ee2b-max" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
@@ -505,7 +543,6 @@ She starts with 1 ritual chosen at random from the list over.</description>
           </constraints>
           <entryLinks>
             <entryLink id="0b37-412f-3ba6-8e91" name="Equipment" hidden="false" collective="false" import="true" targetId="2247-1f56-bc59-0ead" type="selectionEntryGroup"/>
-            <entryLink id="a2d3-6863-3635-4d55" name="Conch Shell Horn" hidden="false" collective="false" import="true" targetId="4648-e96e-321c-e8c2" type="selectionEntry"/>
           </entryLinks>
           <costs>
             <cost name=" gc" typeId="points" value="0"/>
@@ -513,7 +550,7 @@ She starts with 1 ritual chosen at random from the list over.</description>
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Heroines)" hidden="false" id="0ade-ff0e-5d51-d050" sortIndex="3">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Heroines)" hidden="false" id="0ade-ff0e-5d51-d050" sortIndex="3" collapsible="true">
           <entryLinks>
             <entryLink import="true" name="Armour" hidden="false" id="ae81-e046-2151-8a49" collective="false" targetId="ef2c-002f-6edc-0052" type="selectionEntryGroup" sortIndex="3"/>
             <entryLink import="true" name="Hand-to-hand Weapons" hidden="false" id="e435-b27c-849f-74f2" collective="false" targetId="c729-8ae4-d466-1a08" type="selectionEntryGroup" sortIndex="1">
@@ -532,7 +569,6 @@ She starts with 1 ritual chosen at random from the list over.</description>
             <entryLink import="true" name="Missile Weapons" hidden="false" id="a23c-fe43-f133-8795" collective="false" targetId="8498-1d99-6ae4-6adf" type="selectionEntryGroup" sortIndex="2"/>
           </entryLinks>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3273-d2df-a392-b78a-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3273-d2df-a392-b78a-max" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
@@ -554,11 +590,51 @@ She starts with 1 ritual chosen at random from the list over.</description>
       <selectionEntryGroups>
         <selectionEntryGroup name="Skills" id="6896-9a41-2e99-c1e2" hidden="false" sortIndex="5">
           <entryLinks>
-            <entryLink import="true" name="Combat Skills" hidden="false" id="c924-01ae-53b5-f499" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" sortIndex="1"/>
-            <entryLink import="true" name="Shooting Skills" hidden="false" id="54f8-45bc-efaa-4941" collective="false" targetId="0073-d2d6-15c0-45b1" type="selectionEntryGroup" sortIndex="2"/>
-            <entryLink import="true" name="Speed Skills" hidden="false" id="ffd0-59d4-8f8f-e737" collective="false" targetId="e134-0fdf-67a2-4684" type="selectionEntryGroup" sortIndex="3"/>
-            <entryLink import="true" name="Special Skills (Amazons Lustria)" hidden="false" id="704f-ac42-261e-2d8f" collective="false" targetId="4fca-86ef-05c9-c013" type="selectionEntryGroup" sortIndex="4"/>
+            <entryLink import="true" name="Combat Skills" hidden="false" id="c924-01ae-53b5-f499" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" sortIndex="1" collapsible="true">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="f02d-acf0-616a-29b5" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Shooting Skills" hidden="false" id="54f8-45bc-efaa-4941" collective="false" targetId="0073-d2d6-15c0-45b1" type="selectionEntryGroup" sortIndex="2" collapsible="true"/>
+            <entryLink import="true" name="Speed Skills" hidden="false" id="ffd0-59d4-8f8f-e737" collective="false" targetId="e134-0fdf-67a2-4684" type="selectionEntryGroup" sortIndex="5" collapsible="true"/>
+            <entryLink import="true" name="Special Skills (Amazons Lustria)" hidden="false" id="704f-ac42-261e-2d8f" collective="false" targetId="4fca-86ef-05c9-c013" type="selectionEntryGroup" sortIndex="6" collapsible="true"/>
+            <entryLink import="true" name="Strength Skills" hidden="true" id="b622-26dc-3c6e-33ba" type="selectionEntryGroup" targetId="e5ac-cd5b-9057-e096" sortIndex="4" collapsible="true"/>
+            <entryLink import="true" name="Academic Skills" hidden="true" id="b151-7bb1-c3fd-5217" collective="false" targetId="df9d-8724-d362-9d7c" type="selectionEntryGroup" sortIndex="3" collapsible="true">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="2bea-96b7-1902-c279" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Alchemist’s notebook" hidden="false" id="2bea-96b7-1902-c279" sortIndex="7">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9862-63f7-5edc-cdcf"/>
+              </constraints>
+              <rules>
+                <rule name="(2 2 2 2 2) Alchemist’s Laboratory" id="ff77-ca00-7fb4-c1e7" hidden="false">
+                  <description>In the ruins you find loot worth 3D6 gc and a battered old notebook. One of your Heroes may study the Alchemist’s notebook, and the extra wisdom he gains will enable him to choose from Academic skills whenever he gains a new skill in addition to those skills normally available to him.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Training manual" hidden="true" id="f02d-acf0-616a-29b5" sortIndex="8">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="13b8-a822-2cc0-325c"/>
+              </constraints>
+              <rules>
+                <rule name="(5 5 5 5 5 5) Fighting Arena" id="298d-6b54-de7e-57ce" hidden="false">
+                  <description>You find a training manual, which you can either sell for 100 gc or let one of your Heroes read. The extra knowledge your Hero gleans from reading the manual entitles him to choose from Combat skills whenever he gains a new skill, and his WS may now be increased by an extra point above his normal racial maximum (for example, a Human who has the book would now have a maximum Weapon Skill of 7).</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -680,14 +756,7 @@ She starts with 1 ritual chosen at random from the list over.</description>
         <categoryLink id="ec2a-01aa-ff6c-0456" name="Henchmen" hidden="false" targetId="f9b08d8e-4922-78d5-78ad-2047bff52dc8" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="1846-507b-8665-ec74" name="Trading Post" hidden="true" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="534a-6ec6-5d82-da7f" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <selectionEntry id="1846-507b-8665-ec74" name="Trading Post" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="72dd-62c9-89ff-9186" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e40-a617-29f8-4d6d" type="max"/>
@@ -730,7 +799,7 @@ She starts with 1 ritual chosen at random from the list over.</description>
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Henchwoman)" hidden="false" id="183c-4b32-b1f2-329d" sortIndex="5">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Henchwoman)" hidden="false" id="183c-4b32-b1f2-329d" sortIndex="5" collapsible="true">
           <selectionEntryGroups>
             <selectionEntryGroup name="Missile Weapons" id="818f-c50e-deb5-b61d" hidden="false" collective="false" import="true" sortIndex="2">
               <constraints>
@@ -805,7 +874,6 @@ She starts with 1 ritual chosen at random from the list over.</description>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d766-f944-5e17-8f61-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d766-f944-5e17-8f61-max" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
@@ -969,14 +1037,7 @@ She starts with 1 ritual chosen at random from the list over.</description>
         <categoryLink id="05e1-7743-cc03-dcbe" name="Henchmen" hidden="false" targetId="f9b08d8e-4922-78d5-78ad-2047bff52dc8" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="1f51-3ec6-634f-bca6" name="Trading Post" hidden="true" collective="false" import="true" type="upgrade">
-          <modifiers>
-            <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="534a-6ec6-5d82-da7f" type="equalTo"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <selectionEntry id="1f51-3ec6-634f-bca6" name="Trading Post" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e8bc-fb66-47bd-28fe" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8093-c466-b146-5c97" type="max"/>
@@ -1019,7 +1080,7 @@ She starts with 1 ritual chosen at random from the list over.</description>
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Jaguar Warriors)" hidden="false" id="41ad-0f66-a4ff-e248" sortIndex="5">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Jaguar Warriors)" hidden="false" id="41ad-0f66-a4ff-e248" sortIndex="5" collapsible="true">
           <selectionEntryGroups>
             <selectionEntryGroup name="Armour" id="9a57-79b1-f89c-22fb" hidden="false" collective="false" import="true" sortIndex="3">
               <entryLinks>
@@ -1099,7 +1160,6 @@ She starts with 1 ritual chosen at random from the list over.</description>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cad3-68c2-a1d5-c2bd-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cad3-68c2-a1d5-c2bd-max" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>

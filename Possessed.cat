@@ -143,7 +143,7 @@
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Trading Post" hidden="true" id="f11b-bffc-cae8-4c9a" collective="false">
+        <selectionEntry type="upgrade" import="true" name="Trading Post" hidden="false" id="f11b-bffc-cae8-4c9a" collective="false">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditions>
@@ -164,7 +164,7 @@
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Darksouls)" hidden="false" id="edca-8fde-0707-057b">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Darksouls)" hidden="false" id="edca-8fde-0707-057b" collapsible="true">
           <selectionEntryGroups>
             <selectionEntryGroup name="Armour" id="2db9-5e3b-0e52-058a" hidden="false" sortIndex="3">
               <entryLinks>
@@ -202,7 +202,6 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9a83-1831-d72f-0bbb" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ff5e-7d4a-c1c6-46a9" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
@@ -383,7 +382,7 @@
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Trading Post" hidden="true" id="24e5-d490-2a06-9c39" collective="false">
+        <selectionEntry type="upgrade" import="true" name="Trading Post" hidden="false" id="24e5-d490-2a06-9c39" collective="false">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditions>
@@ -404,7 +403,7 @@
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Possessed)" hidden="false" id="b5fb-4e15-d9c9-4565">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Possessed)" hidden="false" id="b5fb-4e15-d9c9-4565" collapsible="true">
           <selectionEntryGroups>
             <selectionEntryGroup name="Armour" id="285b-f0da-8ef0-74d6" hidden="false" sortIndex="3">
               <entryLinks>
@@ -478,7 +477,6 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="60f2-3da8-01f4-cf62" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f734-e68a-8e5b-8c76" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
@@ -655,7 +653,7 @@ They automatically pass any Leadership tests they are required to take.</descrip
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Darksouls)" hidden="false" id="2c22-af6b-cfb0-4307">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Darksouls)" hidden="false" id="2c22-af6b-cfb0-4307" collapsible="true">
           <selectionEntryGroups>
             <selectionEntryGroup name="Armour" id="b965-10d7-0260-d860" hidden="false" sortIndex="3">
               <entryLinks>
@@ -693,11 +691,10 @@ They automatically pass any Leadership tests they are required to take.</descrip
             </selectionEntryGroup>
           </selectionEntryGroups>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4c14-fb4a-3d15-8ce8" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0eaa-6821-6349-8ee8" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Trading Post" hidden="true" id="9f35-4b87-c6c9-bcac" collective="false">
+        <selectionEntry type="upgrade" import="true" name="Trading Post" hidden="false" id="9f35-4b87-c6c9-bcac" collective="false">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditions>
@@ -883,7 +880,7 @@ They automatically pass any Leadership tests they are required to take.</descrip
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Possessed)" hidden="false" id="eab9-40f4-4ca5-5bb4" sortIndex="5">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Possessed)" hidden="false" id="eab9-40f4-4ca5-5bb4" sortIndex="5" collapsible="true">
           <selectionEntryGroups>
             <selectionEntryGroup name="Armour" id="6d76-e911-125a-5848" hidden="false" sortIndex="3">
               <entryLinks>
@@ -969,10 +966,50 @@ They automatically pass any Leadership tests they are required to take.</descrip
       <selectionEntryGroups>
         <selectionEntryGroup name="Skills" id="55b0-b441-f2bc-2680" hidden="false" sortIndex="7">
           <entryLinks>
-            <entryLink import="true" name="Combat Skills" hidden="false" id="5d00-65a6-e1d2-2b1f" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" sortIndex="1"/>
-            <entryLink import="true" name="Academic Skills" hidden="false" id="6ada-d119-825b-1350" collective="false" targetId="df9d-8724-d362-9d7c" type="selectionEntryGroup" sortIndex="3"/>
             <entryLink import="true" name="Speed Skills" hidden="false" id="f535-bad2-fe87-13ea" collective="false" targetId="e134-0fdf-67a2-4684" type="selectionEntryGroup" sortIndex="5"/>
+            <entryLink import="true" name="Combat Skills" hidden="false" id="afc3-b914-5b38-f23d" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" collapsible="true" sortIndex="1">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="abcb-48fe-ead1-7597" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Academic Skills" hidden="false" id="a860-05a7-0fc7-f09b" collective="false" targetId="df9d-8724-d362-9d7c" type="selectionEntryGroup" collapsible="true" sortIndex="3">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="60f5-27dc-9f92-bb45" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Shooting Skills" hidden="true" id="49e0-d55e-48ac-0a5a" type="selectionEntryGroup" targetId="0073-d2d6-15c0-45b1" sortIndex="2"/>
+            <entryLink import="true" name="Strength Skills" hidden="true" id="326d-bb5f-d31f-67aa" type="selectionEntryGroup" targetId="e5ac-cd5b-9057-e096" sortIndex="4"/>
           </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Alchemist’s notebook" hidden="true" id="60f5-27dc-9f92-bb45" sortIndex="6">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="264f-0b71-2f0e-170a"/>
+              </constraints>
+              <rules>
+                <rule name="(2 2 2 2 2) Alchemist’s Laboratory" id="c41b-5703-8c6c-42b3" hidden="false">
+                  <description>In the ruins you find loot worth 3D6 gc and a battered old notebook. One of your Heroes may study the Alchemist’s notebook, and the extra wisdom he gains will enable him to choose from Academic skills whenever he gains a new skill in addition to those skills normally available to him.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Training manual" hidden="true" id="abcb-48fe-ead1-7597" sortIndex="7">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a83f-e9a1-6911-e9c6"/>
+              </constraints>
+              <rules>
+                <rule name="(5 5 5 5 5 5) Fighting Arena" id="85c5-1113-d0cd-e73b" hidden="false">
+                  <description>You find a training manual, which you can either sell for 100 gc or let one of your Heroes read. The extra knowledge your Hero gleans from reading the manual entitles him to choose from Combat skills whenever he gains a new skill, and his WS may now be increased by an extra point above his normal racial maximum (for example, a Human who has the book would now have a maximum Weapon Skill of 7).</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -1108,7 +1145,7 @@ They automatically pass any Leadership tests they are required to take.</descrip
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Possessed)" hidden="false" id="2187-b667-3fcc-2e6b" sortIndex="3">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Possessed)" hidden="false" id="2187-b667-3fcc-2e6b" sortIndex="3" collapsible="true">
           <selectionEntryGroups>
             <selectionEntryGroup name="Armour" id="a86b-a891-38f3-671a" hidden="false" sortIndex="3">
               <entryLinks>
@@ -1759,9 +1796,50 @@ for details.</description>
       <selectionEntryGroups>
         <selectionEntryGroup name="Skills" id="2271-1ac6-1b3d-510d" hidden="false" sortIndex="5">
           <entryLinks>
-            <entryLink import="true" name="Combat Skills" hidden="false" id="ff47-23f2-75e2-8cd8" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" sortIndex="1"/>
-            <entryLink import="true" name="Speed Skills" hidden="false" id="8280-bbe4-2072-0f8b" collective="false" targetId="e134-0fdf-67a2-4684" type="selectionEntryGroup" sortIndex="5"/>
+            <entryLink import="true" name="Combat Skills" hidden="false" id="10b6-fc61-2f33-cac7" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" collapsible="true" sortIndex="1">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="088c-c25a-8544-00bf" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Speed Skills" hidden="false" id="1547-9e76-022e-45e3" collective="false" targetId="e134-0fdf-67a2-4684" type="selectionEntryGroup" sortIndex="5"/>
+            <entryLink import="true" name="Shooting Skills" hidden="true" id="1c3f-e7be-60bf-7a52" type="selectionEntryGroup" targetId="0073-d2d6-15c0-45b1" sortIndex="2"/>
+            <entryLink import="true" name="Academic Skills" hidden="true" id="5210-9a37-26ce-aa4d" collective="false" targetId="df9d-8724-d362-9d7c" type="selectionEntryGroup" collapsible="true" sortIndex="3">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="3898-9c41-fce7-aaf4" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Strength Skills" hidden="true" id="b13d-f69e-72ae-2bb4" type="selectionEntryGroup" targetId="e5ac-cd5b-9057-e096" sortIndex="4"/>
           </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Training manual" hidden="true" id="088c-c25a-8544-00bf" sortIndex="7">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9689-5d1e-9b9b-bd76"/>
+              </constraints>
+              <rules>
+                <rule name="(5 5 5 5 5 5) Fighting Arena" id="587e-89f6-b334-2993" hidden="false">
+                  <description>You find a training manual, which you can either sell for 100 gc or let one of your Heroes read. The extra knowledge your Hero gleans from reading the manual entitles him to choose from Combat skills whenever he gains a new skill, and his WS may now be increased by an extra point above his normal racial maximum (for example, a Human who has the book would now have a maximum Weapon Skill of 7).</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Alchemist’s notebook" hidden="false" id="3898-9c41-fce7-aaf4" sortIndex="6">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c62d-b2e4-4383-bc55"/>
+              </constraints>
+              <rules>
+                <rule name="(2 2 2 2 2) Alchemist’s Laboratory" id="6952-1efb-6a81-db30" hidden="false">
+                  <description>In the ruins you find loot worth 3D6 gc and a battered old notebook. One of your Heroes may study the Alchemist’s notebook, and the extra wisdom he gains will enable him to choose from Academic skills whenever he gains a new skill in addition to those skills normally available to him.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -2462,10 +2540,50 @@ for details.</description>
       <selectionEntryGroups>
         <selectionEntryGroup name="Skills" id="ac5f-8787-d7ac-0895" hidden="false" sortIndex="6">
           <entryLinks>
-            <entryLink import="true" name="Combat Skills" hidden="false" id="cab9-a06a-3026-0571" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" sortIndex="1"/>
-            <entryLink import="true" name="Speed Skills" hidden="false" id="6a69-3598-dbcb-c72c" collective="false" targetId="e134-0fdf-67a2-4684" type="selectionEntryGroup" sortIndex="5"/>
-            <entryLink import="true" name="Strength Skills" hidden="false" id="d01d-a22b-aa7e-1961" type="selectionEntryGroup" targetId="e5ac-cd5b-9057-e096" sortIndex="4"/>
+            <entryLink import="true" name="Combat Skills" hidden="false" id="1bae-8ff8-bd2c-90a9" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" collapsible="true" sortIndex="1">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="ff48-8a35-0f23-12cb" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Strength Skills" hidden="false" id="1d82-1a42-8d04-98b2" type="selectionEntryGroup" targetId="e5ac-cd5b-9057-e096" sortIndex="4"/>
+            <entryLink import="true" name="Speed Skills" hidden="false" id="2154-5922-04f5-80b7" collective="false" targetId="e134-0fdf-67a2-4684" type="selectionEntryGroup" sortIndex="5"/>
+            <entryLink import="true" name="Shooting Skills" hidden="true" id="4b48-b8d6-0f9b-108e" type="selectionEntryGroup" targetId="0073-d2d6-15c0-45b1" sortIndex="2"/>
+            <entryLink import="true" name="Academic Skills" hidden="true" id="1a18-9336-d9b5-f2a9" collective="false" targetId="df9d-8724-d362-9d7c" type="selectionEntryGroup" collapsible="true" sortIndex="3">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="4a87-cbd6-d83b-9f46" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Training manual" hidden="true" id="ff48-8a35-0f23-12cb" sortIndex="7">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a969-b3a9-6c9f-2886"/>
+              </constraints>
+              <rules>
+                <rule name="(5 5 5 5 5 5) Fighting Arena" id="bd53-5e73-8468-d351" hidden="false">
+                  <description>You find a training manual, which you can either sell for 100 gc or let one of your Heroes read. The extra knowledge your Hero gleans from reading the manual entitles him to choose from Combat skills whenever he gains a new skill, and his WS may now be increased by an extra point above his normal racial maximum (for example, a Human who has the book would now have a maximum Weapon Skill of 7).</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Alchemist’s notebook" hidden="false" id="4a87-cbd6-d83b-9f46" sortIndex="6">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="64f2-a825-0c2c-2854"/>
+              </constraints>
+              <rules>
+                <rule name="(2 2 2 2 2) Alchemist’s Laboratory" id="6140-6549-e6c8-b2b8" hidden="false">
+                  <description>In the ruins you find loot worth 3D6 gc and a battered old notebook. One of your Heroes may study the Alchemist’s notebook, and the extra wisdom he gains will enable him to choose from Academic skills whenever he gains a new skill in addition to those skills normally available to him.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>

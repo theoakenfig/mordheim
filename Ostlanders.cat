@@ -137,7 +137,7 @@
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Ostlander)" hidden="false" id="9943-7983-8cd4-b1b1" sortIndex="4">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Ostlander)" hidden="false" id="9943-7983-8cd4-b1b1" sortIndex="4" collapsible="true">
           <selectionEntryGroups>
             <selectionEntryGroup name="Armour" id="54fc-d26e-058f-4c0a" hidden="false" sortIndex="3">
               <entryLinks>
@@ -188,7 +188,6 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e1e8-b14c-f4dc-3e87" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cdde-4755-aa3a-5d04" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
@@ -210,11 +209,50 @@
       <selectionEntryGroups>
         <selectionEntryGroup name="Skills" id="b24a-a850-16dc-be74" hidden="false" sortIndex="6">
           <entryLinks>
-            <entryLink import="true" name="Combat Skills" hidden="false" id="3a69-2583-a12c-cf33" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" sortIndex="1"/>
             <entryLink import="true" name="Speed Skills" hidden="false" id="cda1-7356-5ab6-b233" collective="false" targetId="e134-0fdf-67a2-4684" type="selectionEntryGroup" sortIndex="5"/>
             <entryLink import="true" name="Shooting Skills" hidden="false" id="f4d2-0872-79f2-7be2" type="selectionEntryGroup" targetId="0073-d2d6-15c0-45b1" sortIndex="2"/>
             <entryLink import="true" name="Strength Skills" hidden="false" id="3a65-25bc-99ec-2428" type="selectionEntryGroup" targetId="e5ac-cd5b-9057-e096" sortIndex="4"/>
+            <entryLink import="true" name="Combat Skills" hidden="false" id="f0fd-41b6-4a22-5d94" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" collapsible="true" sortIndex="1">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="3f36-fd64-c16a-e888" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Academic Skills" hidden="true" id="204f-b232-b107-37c9" collective="false" targetId="df9d-8724-d362-9d7c" type="selectionEntryGroup" collapsible="true" sortIndex="3">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="d522-4f85-1b46-8182" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Training manual" hidden="true" id="3f36-fd64-c16a-e888" sortIndex="7">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f91f-24c6-8f26-c657"/>
+              </constraints>
+              <rules>
+                <rule name="(5 5 5 5 5 5) Fighting Arena" id="32ab-f902-7b2d-6c7d" hidden="false">
+                  <description>You find a training manual, which you can either sell for 100 gc or let one of your Heroes read. The extra knowledge your Hero gleans from reading the manual entitles him to choose from Combat skills whenever he gains a new skill, and his WS may now be increased by an extra point above his normal racial maximum (for example, a Human who has the book would now have a maximum Weapon Skill of 7).</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Alchemist’s notebook" hidden="false" id="d522-4f85-1b46-8182" sortIndex="6">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="de6f-a83c-7756-b8a1"/>
+              </constraints>
+              <rules>
+                <rule name="(2 2 2 2 2) Alchemist’s Laboratory" id="a0fe-bc2e-a59f-aa78" hidden="false">
+                  <description>In the ruins you find loot worth 3D6 gc and a battered old notebook. One of your Heroes may study the Alchemist’s notebook, and the extra wisdom he gains will enable him to choose from Academic skills whenever he gains a new skill in addition to those skills normally available to him.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -351,7 +389,7 @@
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Ostlander)" hidden="false" id="ed0f-12ba-a9ac-7d6b" sortIndex="3">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Ostlander)" hidden="false" id="ed0f-12ba-a9ac-7d6b" sortIndex="3" collapsible="true">
           <selectionEntryGroups>
             <selectionEntryGroup name="Armour" id="1664-f654-d5a8-f67d" hidden="false" sortIndex="3">
               <entryLinks>
@@ -402,7 +440,6 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="23b0-2f5c-48b1-3474" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c068-4a16-4794-fd59" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
@@ -423,10 +460,50 @@
       <selectionEntryGroups>
         <selectionEntryGroup name="Skills" id="1aec-6da3-5b8c-41a0" hidden="false" sortIndex="5">
           <entryLinks>
-            <entryLink import="true" name="Combat Skills" hidden="false" id="5f06-0e22-8056-c251" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" sortIndex="1"/>
-            <entryLink import="true" name="Speed Skills" hidden="false" id="9216-c724-5592-8154" collective="false" targetId="e134-0fdf-67a2-4684" type="selectionEntryGroup" sortIndex="5"/>
             <entryLink import="true" name="Strength Skills" hidden="false" id="6d5a-d1f2-7c72-1765" type="selectionEntryGroup" targetId="e5ac-cd5b-9057-e096" sortIndex="4"/>
+            <entryLink import="true" name="Combat Skills" hidden="false" id="8be6-3270-6d12-c02a" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" collapsible="true" sortIndex="1">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="0742-6197-caef-e0dd" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Speed Skills" hidden="true" id="c5a4-c4b8-a94e-9fc2" collective="false" targetId="e134-0fdf-67a2-4684" type="selectionEntryGroup" sortIndex="6"/>
+            <entryLink import="true" name="Shooting Skills" hidden="true" id="9b28-bca6-08ba-0d52" type="selectionEntryGroup" targetId="0073-d2d6-15c0-45b1" sortIndex="2"/>
+            <entryLink import="true" name="Academic Skills" hidden="true" id="25f3-fdc9-4c83-a686" collective="false" targetId="df9d-8724-d362-9d7c" type="selectionEntryGroup" collapsible="true" sortIndex="3">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="8be6-63f3-1409-4568" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Training manual" hidden="true" id="0742-6197-caef-e0dd" sortIndex="8">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2a57-d209-56ca-c371"/>
+              </constraints>
+              <rules>
+                <rule name="(5 5 5 5 5 5) Fighting Arena" id="e09e-7349-71b2-6043" hidden="false">
+                  <description>You find a training manual, which you can either sell for 100 gc or let one of your Heroes read. The extra knowledge your Hero gleans from reading the manual entitles him to choose from Combat skills whenever he gains a new skill, and his WS may now be increased by an extra point above his normal racial maximum (for example, a Human who has the book would now have a maximum Weapon Skill of 7).</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Alchemist’s notebook" hidden="false" id="8be6-63f3-1409-4568" sortIndex="7">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9841-1548-b8c4-d18f"/>
+              </constraints>
+              <rules>
+                <rule name="(2 2 2 2 2) Alchemist’s Laboratory" id="08b6-a09f-684c-be5a" hidden="false">
+                  <description>In the ruins you find loot worth 3D6 gc and a battered old notebook. One of your Heroes may study the Alchemist’s notebook, and the extra wisdom he gains will enable him to choose from Academic skills whenever he gains a new skill in addition to those skills normally available to him.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -570,7 +647,7 @@
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Ostlander)" hidden="false" id="945f-9956-9a2c-8015" sortIndex="4">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Ostlander)" hidden="false" id="945f-9956-9a2c-8015" sortIndex="4" collapsible="true">
           <selectionEntryGroups>
             <selectionEntryGroup name="Armour" id="9cbc-322f-40a6-aa74" hidden="false" sortIndex="3">
               <entryLinks>
@@ -621,7 +698,6 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9891-7544-721c-1ea8" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a8a8-5f1c-f041-5c56" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
@@ -644,11 +720,50 @@
       <selectionEntryGroups>
         <selectionEntryGroup name="Skills" id="bf1d-dc73-016c-3f28" hidden="false" sortIndex="6">
           <entryLinks>
-            <entryLink import="true" name="Combat Skills" hidden="false" id="23bc-a035-ae3d-5a37" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" sortIndex="1"/>
-            <entryLink import="true" name="Academic Skills" hidden="false" id="94a7-99e9-2809-efd0" collective="false" targetId="df9d-8724-d362-9d7c" type="selectionEntryGroup" sortIndex="3"/>
             <entryLink import="true" name="Speed Skills" hidden="false" id="39f6-86c9-5ad2-7591" collective="false" targetId="e134-0fdf-67a2-4684" type="selectionEntryGroup" sortIndex="5"/>
             <entryLink import="true" name="Strength Skills" hidden="false" id="6fe0-4b03-0e74-37dc" type="selectionEntryGroup" targetId="e5ac-cd5b-9057-e096" sortIndex="4"/>
+            <entryLink import="true" name="Combat Skills" hidden="false" id="d1fd-6358-b1d6-1bf4" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" collapsible="true" sortIndex="1">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="79bf-e034-9a39-f58d" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Academic Skills" hidden="false" id="a1de-ed6f-46a0-cf6b" collective="false" targetId="df9d-8724-d362-9d7c" type="selectionEntryGroup" collapsible="true" sortIndex="3">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="f9f4-6ce5-65b3-b376" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Shooting Skills" hidden="true" id="06cb-cc84-c3a1-d5ea" type="selectionEntryGroup" targetId="0073-d2d6-15c0-45b1" sortIndex="2"/>
           </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Alchemist’s notebook" hidden="true" id="f9f4-6ce5-65b3-b376" sortIndex="6">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8e84-e511-df87-bbb5"/>
+              </constraints>
+              <rules>
+                <rule name="(2 2 2 2 2) Alchemist’s Laboratory" id="01fd-bd1e-aadb-8dd1" hidden="false">
+                  <description>In the ruins you find loot worth 3D6 gc and a battered old notebook. One of your Heroes may study the Alchemist’s notebook, and the extra wisdom he gains will enable him to choose from Academic skills whenever he gains a new skill in addition to those skills normally available to him.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Training manual" hidden="true" id="79bf-e034-9a39-f58d" sortIndex="7">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5406-25c5-041f-667b"/>
+              </constraints>
+              <rules>
+                <rule name="(5 5 5 5 5 5) Fighting Arena" id="8093-a13c-2370-6a93" hidden="false">
+                  <description>You find a training manual, which you can either sell for 100 gc or let one of your Heroes read. The extra knowledge your Hero gleans from reading the manual entitles him to choose from Combat skills whenever he gains a new skill, and his WS may now be increased by an extra point above his normal racial maximum (for example, a Human who has the book would now have a maximum Weapon Skill of 7).</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -796,7 +911,7 @@
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Trading Post" hidden="true" id="0710-09d9-c4c3-d7ef" collective="false" sortIndex="6">
+        <selectionEntry type="upgrade" import="true" name="Trading Post" hidden="false" id="0710-09d9-c4c3-d7ef" collective="false" sortIndex="6">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditions>
@@ -817,7 +932,7 @@
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Ostlander)" hidden="false" id="a743-68fb-6a72-236e" sortIndex="5">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Ostlander)" hidden="false" id="a743-68fb-6a72-236e" sortIndex="5" collapsible="true">
           <selectionEntryGroups>
             <selectionEntryGroup name="Armour" id="045f-78ab-45f0-bd6e" hidden="false" sortIndex="3">
               <entryLinks>
@@ -868,7 +983,6 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ab43-67b7-6e42-c03e" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fc82-02ff-57c3-626c" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
@@ -1049,7 +1163,7 @@
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Trading Post" hidden="true" id="6c08-7199-a542-220c" collective="false" sortIndex="6">
+        <selectionEntry type="upgrade" import="true" name="Trading Post" hidden="false" id="6c08-7199-a542-220c" collective="false" sortIndex="6">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditions>
@@ -1070,7 +1184,7 @@
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Jaeger)" hidden="false" id="9054-b8df-2dfc-1d3b" sortIndex="5">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Jaeger)" hidden="false" id="9054-b8df-2dfc-1d3b" sortIndex="5" collapsible="true">
           <selectionEntryGroups>
             <selectionEntryGroup name="Armour" id="ce7a-52df-6e12-7b2e" hidden="false" sortIndex="3">
               <entryLinks>
@@ -1122,7 +1236,6 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8bb7-c68d-8bda-f6b2" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3cce-d16e-5887-8629" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
@@ -1313,7 +1426,7 @@ As such, they automatically pass all Leadership based tests they are required to
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Trading Post" hidden="true" id="385d-81f2-bcdf-4839" collective="false" sortIndex="6">
+        <selectionEntry type="upgrade" import="true" name="Trading Post" hidden="false" id="385d-81f2-bcdf-4839" collective="false" sortIndex="6">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditions>
@@ -1364,7 +1477,6 @@ As such, they automatically pass all Leadership based tests they are required to
             </selectionEntryGroup>
           </selectionEntryGroups>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c0d3-9738-84ee-fc1f" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="622e-eafc-2012-3ffa" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
@@ -1527,7 +1639,7 @@ Ogres only gain advances at half the rate of everyone else (ie, they must accrue
         <categoryLink id="161b-ed37-1575-d7a3" name="Henchmen" hidden="false" targetId="f9b08d8e-4922-78d5-78ad-2047bff52dc8" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Trading Post" hidden="true" id="7dc1-0328-b9bc-e13e" collective="false" sortIndex="5">
+        <selectionEntry type="upgrade" import="true" name="Trading Post" hidden="false" id="7dc1-0328-b9bc-e13e" collective="false" sortIndex="5">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditions>
@@ -1548,7 +1660,7 @@ Ogres only gain advances at half the rate of everyone else (ie, they must accrue
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Ogre)" hidden="false" id="b8d9-78b3-932f-be2a" sortIndex="4">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Ogre)" hidden="false" id="b8d9-78b3-932f-be2a" sortIndex="4" collapsible="true">
           <selectionEntryGroups>
             <selectionEntryGroup name="Armour" id="0d06-ef94-dabf-4e65" hidden="false">
               <entryLinks>
@@ -1575,7 +1687,6 @@ Ogres only gain advances at half the rate of everyone else (ie, they must accrue
             </selectionEntryGroup>
           </selectionEntryGroups>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7096-f480-52c6-c46a" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aae7-8d53-b86f-2038" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
@@ -1622,169 +1733,6 @@ As a result they can never hire any Mercenaries except for Ogres (who are not an
     </rule>
   </rules>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup id="88aa-cad7-c98a-a301" name="Ostlander Equipment" hidden="false" collective="false" import="true">
-      <entryLinks>
-        <entryLink id="3ab4-04e7-b36b-26d4" name="Hand to Hand Weapons" hidden="false" collective="false" import="true" targetId="ee2d-3205-372e-b515" type="selectionEntryGroup"/>
-        <entryLink id="06be-97c2-50f2-08fd" name="Missile Weapons" hidden="false" collective="false" import="true" targetId="e18e-1b85-7f19-63d8" type="selectionEntryGroup"/>
-        <entryLink id="ea6a-a2c5-05b1-8ccf" name="Armor" hidden="false" collective="false" import="true" targetId="d0c0-70fc-ce0c-05bf" type="selectionEntryGroup"/>
-      </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="9129-f620-91e0-d496" name="Ruffian Equipment" hidden="false" collective="false" import="true">
-      <entryLinks>
-        <entryLink id="88f9-18a3-f800-bf70" name="Hand to Hand Weapons" hidden="false" collective="false" import="true" targetId="00ce-fd8c-4167-a80d" type="selectionEntryGroup"/>
-        <entryLink id="b22c-5503-9d6a-984f" name="Armor" hidden="false" collective="false" import="true" targetId="2810-6d9e-321b-5047" type="selectionEntryGroup"/>
-      </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="0441-238f-4e90-16b8" name="Jaeger Equipment" hidden="false" collective="false" import="true">
-      <entryLinks>
-        <entryLink id="66f7-d8ac-4930-8b84" name="Hand to Hand Weapons" hidden="false" collective="false" import="true" targetId="1c89-592f-4ad9-aebc" type="selectionEntryGroup"/>
-        <entryLink id="5f49-5b66-c704-6361" name="Missile Weapons" hidden="false" collective="false" import="true" targetId="8936-cbd3-1ee9-7190" type="selectionEntryGroup"/>
-        <entryLink id="2f3e-8f3c-2cf4-b0c6" name="Armor" hidden="false" collective="false" import="true" targetId="3b8e-095a-e18d-aee3" type="selectionEntryGroup"/>
-      </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="d0de-65d8-ae77-bbc0" name="Ogre Equipment" hidden="false" collective="false" import="true">
-      <entryLinks>
-        <entryLink id="6921-b5f3-e7c8-8671" name="Hand to Hand Weapons" hidden="false" collective="false" import="true" targetId="6a4a-1653-4f2b-e25d" type="selectionEntryGroup"/>
-        <entryLink id="9848-a64c-9478-754f" name="Armor" hidden="false" collective="false" import="true" targetId="2810-6d9e-321b-5047" type="selectionEntryGroup"/>
-      </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="ee2d-3205-372e-b515" name="Hand to Hand Weapons" hidden="false" collective="false" import="true">
-      <entryLinks>
-        <entryLink id="aa00-9cfa-9fb5-95d7" name="Dagger" hidden="false" collective="false" import="true" targetId="64e0-0bb6-542b-4beb" type="selectionEntry"/>
-        <entryLink id="14f4-71a8-ac8d-6c63" name="Free Dagger" hidden="false" collective="false" import="true" targetId="0d0b-ed37-d8b0-4cbf" type="selectionEntry"/>
-        <entryLink id="4d27-3a21-b41b-cc80" name="Hammer" hidden="false" collective="false" import="true" targetId="cfcc-39fd-aeb4-876a" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="name" value="Mace, Hammer"/>
-          </modifiers>
-        </entryLink>
-        <entryLink id="018f-9cec-013b-7f44" name="Axe" hidden="false" collective="false" import="true" targetId="5d01-06b9-3a86-73c9" type="selectionEntry"/>
-        <entryLink id="dd1e-282a-aa8f-863d" name="Sword" hidden="false" collective="false" import="true" targetId="34fd-d6a3-50ee-ee06" type="selectionEntry"/>
-        <entryLink id="033a-1e27-d322-ded5" name="Double Handed Weapon" hidden="false" collective="false" import="true" targetId="a0a1-b311-e3aa-6c3b" type="selectionEntry"/>
-        <entryLink id="2375-268a-c35c-87bf" name="Spear" hidden="false" collective="false" import="true" targetId="005e-e397-8108-f198" type="selectionEntry"/>
-      </entryLinks>
-      <constraints>
-        <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="8957-8b-d43a-cf6e" includeChildSelections="false"/>
-      </constraints>
-      <modifiers>
-        <modifier type="set" value="3" field="8957-8b-d43a-cf6e">
-          <conditions>
-            <condition type="equalTo" value="1" field="selections" scope="parent" childId="0d0b-ed37-d8b0-4cbf" shared="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="00ce-fd8c-4167-a80d" name="Hand to Hand Weapons" hidden="false" collective="false" import="true">
-      <entryLinks>
-        <entryLink id="7cd3-43ad-60a5-c0f4" name="Dagger" hidden="false" collective="false" import="true" targetId="64e0-0bb6-542b-4beb" type="selectionEntry"/>
-        <entryLink id="d461-4d64-8498-4cb9" name="Free Dagger" hidden="false" collective="false" import="true" targetId="0d0b-ed37-d8b0-4cbf" type="selectionEntry"/>
-        <entryLink id="458b-e211-02e2-76b6" name="Hammer" hidden="false" collective="false" import="true" targetId="cfcc-39fd-aeb4-876a" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="name" value="Mace, Hammer"/>
-          </modifiers>
-        </entryLink>
-        <entryLink id="4b74-1352-3dc9-09a7" name="Axe" hidden="false" collective="false" import="true" targetId="5d01-06b9-3a86-73c9" type="selectionEntry"/>
-        <entryLink id="3db5-7f99-64bb-836b" name="Sword" hidden="false" collective="false" import="true" targetId="34fd-d6a3-50ee-ee06" type="selectionEntry"/>
-        <entryLink id="a6c0-7444-3bc0-ae29" name="Double Handed Weapon" hidden="false" collective="false" import="true" targetId="a0a1-b311-e3aa-6c3b" type="selectionEntry"/>
-      </entryLinks>
-      <constraints>
-        <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="29b0-89ea-7ca4-503d" includeChildSelections="false"/>
-      </constraints>
-      <modifiers>
-        <modifier type="set" value="3" field="29b0-89ea-7ca4-503d">
-          <conditions>
-            <condition type="equalTo" value="1" field="selections" scope="parent" childId="0d0b-ed37-d8b0-4cbf" shared="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="1c89-592f-4ad9-aebc" name="Hand to Hand Weapons" hidden="false" collective="false" import="true">
-      <entryLinks>
-        <entryLink id="cefa-6948-597b-9e9b" name="Dagger" hidden="false" collective="false" import="true" targetId="64e0-0bb6-542b-4beb" type="selectionEntry"/>
-        <entryLink id="9132-f561-281d-ef14" name="Free Dagger" hidden="false" collective="false" import="true" targetId="0d0b-ed37-d8b0-4cbf" type="selectionEntry"/>
-        <entryLink id="6b77-088b-a334-ccb8" name="Axe" hidden="false" collective="false" import="true" targetId="5d01-06b9-3a86-73c9" type="selectionEntry"/>
-        <entryLink id="5bf7-805a-ddff-9e69" name="Sword" hidden="false" collective="false" import="true" targetId="34fd-d6a3-50ee-ee06" type="selectionEntry"/>
-        <entryLink id="1ee9-ecc8-9251-3e28" name="Spear" hidden="false" collective="false" import="true" targetId="005e-e397-8108-f198" type="selectionEntry"/>
-      </entryLinks>
-      <constraints>
-        <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="45c7-2060-5877-153f" includeChildSelections="false"/>
-      </constraints>
-      <modifiers>
-        <modifier type="set" value="3" field="45c7-2060-5877-153f">
-          <conditions>
-            <condition type="equalTo" value="1" field="selections" scope="parent" childId="0d0b-ed37-d8b0-4cbf" shared="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="6a4a-1653-4f2b-e25d" name="Hand to Hand Weapons" hidden="false" collective="false" import="true">
-      <entryLinks>
-        <entryLink id="bcd0-135f-12c7-67a1" name="Hammer" hidden="false" collective="false" import="true" targetId="cfcc-39fd-aeb4-876a" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="name" value="Club"/>
-          </modifiers>
-        </entryLink>
-        <entryLink id="c6ea-8d2b-d620-5b1b" name="Axe" hidden="false" collective="false" import="true" targetId="5d01-06b9-3a86-73c9" type="selectionEntry"/>
-        <entryLink id="c0ea-212a-defb-79ce" name="Sword" hidden="false" collective="false" import="true" targetId="34fd-d6a3-50ee-ee06" type="selectionEntry"/>
-        <entryLink id="6ce9-0fad-5ed7-624f" name="Double Handed Weapon" hidden="false" collective="false" import="true" targetId="a0a1-b311-e3aa-6c3b" type="selectionEntry"/>
-      </entryLinks>
-      <constraints>
-        <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="fb3c-c989-b81-dc8" includeChildSelections="false"/>
-      </constraints>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="e18e-1b85-7f19-63d8" name="Missile Weapons" hidden="false" collective="false" import="true">
-      <entryLinks>
-        <entryLink id="fedd-5304-3fb2-6c24" name="Bow" hidden="false" collective="false" import="true" targetId="311a-bf3f-67ff-46e7" type="selectionEntry"/>
-        <entryLink id="0d3a-eb59-d1f2-cf5f" name="Pistol" hidden="false" collective="false" import="true" targetId="67e9-a4f5-8f76-168c" type="selectionEntry"/>
-      </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="8936-cbd3-1ee9-7190" name="Missile Weapons" hidden="false" collective="false" import="true">
-      <entryLinks>
-        <entryLink id="cf64-a243-41d0-d418" name="Bow" hidden="false" collective="false" import="true" targetId="311a-bf3f-67ff-46e7" type="selectionEntry"/>
-        <entryLink id="58e2-5916-d4ae-8ac5" name="Pistol" hidden="false" collective="false" import="true" targetId="67e9-a4f5-8f76-168c" type="selectionEntry"/>
-        <entryLink id="3d07-b4ac-e7b6-e1e8" name="Handgun" hidden="false" collective="false" import="true" targetId="7f5a-d04d-153d-d334" type="selectionEntry"/>
-        <entryLink id="7e53-38c7-40af-395f" name="Blunderbuss" hidden="false" collective="false" import="true" targetId="4386-7400-9146-1dee" type="selectionEntry"/>
-        <entryLink id="b521-8395-70fa-96c6" name="Double Barreled Pistol" hidden="false" collective="false" import="true" targetId="b8bb-20cf-ae3a-693f" type="selectionEntry"/>
-        <entryLink id="87c3-9e80-3e89-fbc1" name="Double Barreled Hochland Long Rifle" hidden="false" collective="false" import="true" targetId="5fd9-080e-10f1-9d52" type="selectionEntry"/>
-        <entryLink id="2c7e-bc45-342a-e5b4" name="Hochland Long Rifle" hidden="false" collective="false" import="true" targetId="51ed-e371-76d2-d46b" type="selectionEntry"/>
-      </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="d0c0-70fc-ce0c-05bf" name="Armor" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d3fd-2cf0-da7b-cf71" type="min"/>
-      </constraints>
-      <entryLinks>
-        <entryLink id="a828-1ce9-0b80-495d" name="Heavy Armour" hidden="false" collective="false" import="true" targetId="4e34-bbc5-c7ef-6bd6" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" field="hidden" value="true">
-              <conditions>
-                <condition field="selections" scope="ancestor" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="fcbb-50c3-5314-955a" type="instanceOf"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink id="f9bb-ce0d-5cbe-9d88" name="Helmet" hidden="false" collective="false" import="true" targetId="d0e5-ca89-5f0d-f5d2" type="selectionEntry"/>
-        <entryLink id="024a-7bc0-5f3b-d887" name="Light Armour" hidden="false" collective="false" import="true" targetId="3d2a-426a-c350-2a03" type="selectionEntry"/>
-        <entryLink id="242a-a419-80c7-8dd7" name="Shield" hidden="false" collective="false" import="true" targetId="74fb-cc90-1361-df26" type="selectionEntry"/>
-      </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="2810-6d9e-321b-5047" name="Armor" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5702-7fb2-0dce-c045" type="min"/>
-      </constraints>
-      <entryLinks>
-        <entryLink id="4896-c057-3a55-85e5" name="Light Armour" hidden="false" collective="false" import="true" targetId="3d2a-426a-c350-2a03" type="selectionEntry"/>
-      </entryLinks>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="3b8e-095a-e18d-aee3" name="Armor" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0489-9913-c635-b4ae" type="min"/>
-      </constraints>
-      <entryLinks>
-        <entryLink id="cdd1-ecc3-0321-ac56" name="Helmet" hidden="false" collective="false" import="true" targetId="d0e5-ca89-5f0d-f5d2" type="selectionEntry"/>
-        <entryLink id="5192-da42-7878-1675" name="Light Armour" hidden="false" collective="false" import="true" targetId="3d2a-426a-c350-2a03" type="selectionEntry"/>
-        <entryLink id="ecb1-a2f5-ada3-64a5" name="Shield" hidden="false" collective="false" import="true" targetId="74fb-cc90-1361-df26" type="selectionEntry"/>
-      </entryLinks>
-    </selectionEntryGroup>
     <selectionEntryGroup id="a6fe-86d4-3dd2-8cce" name="Special Skills (Ostlander)" hidden="false" collective="false" import="true">
       <selectionEntries>
         <selectionEntry id="0b53-602e-7566-ce6f" name="Bull Rush" hidden="false" collective="false" import="true" type="upgrade">

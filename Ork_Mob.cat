@@ -119,7 +119,7 @@
         <categoryLink id="83ab8692-01da-65c5-af52-a55d4800f012-a0fce0bc-02e0-a064-7a39-5b97ff8a9c94" hidden="false" targetId="a0fce0bc-02e0-a064-7a39-5b97ff8a9c94" primary="true" name="Heroes"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Trading Post" hidden="false" id="836e-5ee8-ca12-cb8d" collective="false">
+        <selectionEntry type="upgrade" import="true" name="Trading Post" hidden="false" id="836e-5ee8-ca12-cb8d" collective="false" sortIndex="4">
           <constraints>
             <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="c776-3f2d-bb4d-7e0f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2805-6881-9e6e-d443" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -133,7 +133,7 @@
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Orcs)" hidden="false" id="0f07-d78f-0f8f-c802">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Orcs)" hidden="false" id="0f07-d78f-0f8f-c802" sortIndex="3" collapsible="true">
           <selectionEntryGroups>
             <selectionEntryGroup name="Armour" id="736b-93c0-ee93-6586" hidden="false" sortIndex="3">
               <entryLinks>
@@ -184,34 +184,71 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d77e-809d-5748-a40c" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2658-9171-8ad8-bda4" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="a7d4eb84-400b-29e8-339c-fceebcba1553" name="Experience" hidden="false" collective="false" import="true" targetId="f0fc009a-7990-32ef-b84b-b631058620e2" type="selectionEntry">
+        <entryLink id="a7d4eb84-400b-29e8-339c-fceebcba1553" name="Experience" hidden="false" collective="false" import="true" targetId="f0fc009a-7990-32ef-b84b-b631058620e2" type="selectionEntry" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="15" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="bf67-4a81-122e-cbc5" type="min"/>
           </constraints>
         </entryLink>
-        <entryLink import="true" name="Characteristic Increases" hidden="false" id="4743-80f8-5f81-01f5" collective="false" targetId="36e117d8-419f-59b9-e337-512db3c6c990" type="selectionEntryGroup" collapsible="true"/>
-        <entryLink import="true" name="Serious Injuries" hidden="false" id="381a-7485-d3b1-97a3" collective="false" targetId="313b-a816-0a89-926c" type="selectionEntryGroup"/>
+        <entryLink import="true" name="Characteristic Increases" hidden="false" id="4743-80f8-5f81-01f5" collective="false" targetId="36e117d8-419f-59b9-e337-512db3c6c990" type="selectionEntryGroup" collapsible="true" sortIndex="2"/>
+        <entryLink import="true" name="Serious Injuries" hidden="false" id="381a-7485-d3b1-97a3" collective="false" targetId="313b-a816-0a89-926c" type="selectionEntryGroup" sortIndex="6"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="40"/>
         <cost name="Warband Rating" typeId="wb-rating" value="5"/>
       </costs>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Skills" id="dbba-88f1-ff2d-e3c7" hidden="false">
+        <selectionEntryGroup name="Skills" id="dbba-88f1-ff2d-e3c7" hidden="false" sortIndex="5">
           <entryLinks>
-            <entryLink import="true" name="Combat Skills" hidden="false" id="0f9c-8b3a-a1d8-4e05" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" sortIndex="1"/>
-            <entryLink import="true" name="Academic Skills" hidden="true" id="6503-bd12-77f2-9e2e" collective="false" targetId="df9d-8724-d362-9d7c" type="selectionEntryGroup" sortIndex="3"/>
             <entryLink import="true" name="Speed Skills" hidden="true" id="bd99-49e2-de7e-70bf" collective="false" targetId="e134-0fdf-67a2-4684" type="selectionEntryGroup" sortIndex="5"/>
             <entryLink import="true" name="Shooting Skills" hidden="false" id="74c6-a630-f07c-74c4" type="selectionEntryGroup" targetId="0073-d2d6-15c0-45b1" sortIndex="2"/>
             <entryLink import="true" name="Strength Skills" hidden="false" id="c285-ee7a-4fb2-bfd2" type="selectionEntryGroup" targetId="e5ac-cd5b-9057-e096" sortIndex="4"/>
-            <entryLink import="true" name="Special Skils (Ork Mob)" hidden="false" id="d080-516e-494b-8cdf" type="selectionEntryGroup" targetId="15a59018-e588-319b-6ce2-450c80998e97"/>
+            <entryLink import="true" name="Special Skils (Orc Mob)" hidden="false" id="d080-516e-494b-8cdf" type="selectionEntryGroup" targetId="15a59018-e588-319b-6ce2-450c80998e97" sortIndex="6"/>
+            <entryLink import="true" name="Academic Skills" hidden="true" id="ba25-1d78-6ddc-1052" collective="false" targetId="df9d-8724-d362-9d7c" type="selectionEntryGroup" collapsible="true" sortIndex="3">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="5afa-0bad-b583-8e0f" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Combat Skills" hidden="false" id="ab53-3b7b-af5e-4d4f" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" collapsible="true" sortIndex="1">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="cb00-9c85-e402-3724" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Alchemist’s notebook" hidden="false" id="5afa-0bad-b583-8e0f" sortIndex="7">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5bd3-dbde-7a64-3d1e"/>
+              </constraints>
+              <rules>
+                <rule name="(2 2 2 2 2) Alchemist’s Laboratory" id="488b-d164-bf11-db1b" hidden="false">
+                  <description>In the ruins you find loot worth 3D6 gc and a battered old notebook. One of your Heroes may study the Alchemist’s notebook, and the extra wisdom he gains will enable him to choose from Academic skills whenever he gains a new skill in addition to those skills normally available to him.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Training manual" hidden="true" id="cb00-9c85-e402-3724" sortIndex="8">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1755-4f3b-9679-b879"/>
+              </constraints>
+              <rules>
+                <rule name="(5 5 5 5 5 5) Fighting Arena" id="d328-db08-8e5d-47c1" hidden="false">
+                  <description>You find a training manual, which you can either sell for 100 gc or let one of your Heroes read. The extra knowledge your Hero gleans from reading the manual entitles him to choose from Combat skills whenever he gains a new skill, and his WS may now be increased by an extra point above his normal racial maximum (for example, a Human who has the book would now have a maximum Weapon Skill of 7).</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -497,7 +534,7 @@ Goblins are far too afraid of Orcs to challenge them individually.</description>
         <categoryLink id="074d9cc5-ab18-5302-91eb-29f4f9d61bcc-f9b08d8e-4922-78d5-78ad-2047bff52dc8" hidden="false" targetId="f9b08d8e-4922-78d5-78ad-2047bff52dc8" primary="true" name="Henchmen"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Goblin Warriors" hidden="false" id="e3ac-e156-3d96-3a7f">
+        <selectionEntry type="model" import="true" name="Goblin Warriors" hidden="false" id="e3ac-e156-3d96-3a7f" sortIndex="1">
           <costs>
             <cost name=" gc" typeId="points" value="15"/>
             <cost name=" Warband Rating" typeId="wb-rating" value="5"/>
@@ -519,7 +556,7 @@ Goblins are far too afraid of Orcs to challenge them individually.</description>
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Goblins)" hidden="false" id="f6f8-dd68-4337-9d43">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Goblins)" hidden="false" id="f6f8-dd68-4337-9d43" sortIndex="4" collapsible="true">
           <selectionEntryGroups>
             <selectionEntryGroup name="Armour" id="6981-84b5-d2e5-e75e" hidden="false" sortIndex="3">
               <entryLinks>
@@ -561,20 +598,40 @@ Goblins are far too afraid of Orcs to challenge them individually.</description>
             </selectionEntryGroup>
             <selectionEntryGroup name="Miscellaneous" id="16bb-f909-4ef4-6650" hidden="false">
               <entryLinks>
-                <entryLink import="true" name="Squig Prodder" hidden="false" id="7185-6520-3665-c9f5" type="selectionEntry" targetId="5dcd-265b-9fef-751d" sortIndex="1"/>
+                <entryLink import="true" name="Squigg Prodder" hidden="false" id="7185-6520-3665-c9f5" type="selectionEntry" targetId="5dcd-265b-9fef-751d" sortIndex="1"/>
                 <entryLink import="true" name="Mad Cap Mushrooms" hidden="false" id="2f35-a60e-8fed-d88d" type="selectionEntry" targetId="edc4-3728-be2f-d50d" sortIndex="2"/>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c745-7375-4ec3-e6d5" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5ae1-e285-8fd7-c772" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Trading Post" hidden="false" id="67ed-531e-bfc7-4137" collective="false" sortIndex="5">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="parent" childId="534a-6ec6-5d82-da7f" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="ed4d-5572-5823-2d35" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="56ca-a7f2-d9ec-c0d9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Equipment" hidden="false" id="bead-b7f1-251b-abcc" collective="false" targetId="2247-1f56-bc59-0ead" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name=" gc" typeId="points" value="0"/>
+            <cost name=" Warband Rating" typeId="wb-rating" value="0"/>
+            <cost name=" Rarity" typeId="rarity" value="0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink import="true" name="Characteristic Increases" hidden="false" id="325c-2a18-34f5-a531" collective="false" targetId="36e117d8-419f-59b9-e337-512db3c6c990" type="selectionEntryGroup" collapsible="true"/>
-        <entryLink import="true" name="Experience" hidden="false" id="3d4f-334a-287a-2b70" type="selectionEntry" targetId="d769-0d85-e810-df60"/>
+        <entryLink import="true" name="Characteristic Increases" hidden="false" id="325c-2a18-34f5-a531" collective="false" targetId="36e117d8-419f-59b9-e337-512db3c6c990" type="selectionEntryGroup" collapsible="true" sortIndex="3"/>
+        <entryLink import="true" name="Experience" hidden="false" id="3d4f-334a-287a-2b70" type="selectionEntry" targetId="d769-0d85-e810-df60" sortIndex="2"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry id="83acbe09-ec66-c45c-0f5b-1a9e0017016e" name="Orc Boss" page="0" hidden="false" collective="false" import="true" type="model">
@@ -698,7 +755,7 @@ Goblins are far too afraid of Orcs to challenge them individually.</description>
         <categoryLink id="83acbe09-ec66-c45c-0f5b-1a9e0017016e-a0fce0bc-02e0-a064-7a39-5b97ff8a9c94" hidden="false" targetId="a0fce0bc-02e0-a064-7a39-5b97ff8a9c94" primary="true" name="Heroes"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Trading Post" hidden="false" id="ca46-ba05-c694-1da7" collective="false">
+        <selectionEntry type="upgrade" import="true" name="Trading Post" hidden="false" id="ca46-ba05-c694-1da7" collective="false" sortIndex="5">
           <constraints>
             <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="23cd-41d7-1913-5819" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f02b-3016-7afc-9ec4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -712,7 +769,7 @@ Goblins are far too afraid of Orcs to challenge them individually.</description>
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Orcs)" hidden="false" id="6ff6-ae4b-9472-a7b9">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Orcs)" hidden="false" id="6ff6-ae4b-9472-a7b9" sortIndex="4" collapsible="true">
           <selectionEntryGroups>
             <selectionEntryGroup name="Armour" id="4e11-dcc5-dd19-0fa1" hidden="false" sortIndex="3">
               <entryLinks>
@@ -763,35 +820,72 @@ Goblins are far too afraid of Orcs to challenge them individually.</description>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fac2-c0be-5fde-ee10" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="703b-e8ef-631e-4762" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="9e2cb516-6834-4a3e-ec39-9855b3d6ed2d" name="Experience" hidden="false" collective="false" import="true" targetId="f0fc009a-7990-32ef-b84b-b631058620e2" type="selectionEntry">
+        <entryLink id="9e2cb516-6834-4a3e-ec39-9855b3d6ed2d" name="Experience" hidden="false" collective="false" import="true" targetId="f0fc009a-7990-32ef-b84b-b631058620e2" type="selectionEntry" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="parent" value="20" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="39e4-26ae-90d6-f6c4" type="min"/>
           </constraints>
         </entryLink>
-        <entryLink import="true" name="Characteristic Increases" hidden="false" id="dd72-1e2d-bc05-3b74" collective="false" targetId="36e117d8-419f-59b9-e337-512db3c6c990" type="selectionEntryGroup" collapsible="true"/>
-        <entryLink import="true" name="Serious Injuries" hidden="false" id="3ca1-0816-a77b-93a8" collective="false" targetId="313b-a816-0a89-926c" type="selectionEntryGroup"/>
-        <entryLink import="true" name="Leader" hidden="false" id="63d1-9f65-b503-50d8" type="selectionEntry" targetId="c392-8a40-3bfc-bdfa"/>
+        <entryLink import="true" name="Characteristic Increases" hidden="false" id="dd72-1e2d-bc05-3b74" collective="false" targetId="36e117d8-419f-59b9-e337-512db3c6c990" type="selectionEntryGroup" collapsible="true" sortIndex="3"/>
+        <entryLink import="true" name="Serious Injuries" hidden="false" id="3ca1-0816-a77b-93a8" collective="false" targetId="313b-a816-0a89-926c" type="selectionEntryGroup" sortIndex="7"/>
+        <entryLink import="true" name="Leader" hidden="false" id="63d1-9f65-b503-50d8" type="selectionEntry" targetId="c392-8a40-3bfc-bdfa" sortIndex="1"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="80"/>
         <cost name="Warband Rating" typeId="wb-rating" value="5"/>
       </costs>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Skills" id="f9ff-e4b3-cfbd-6f50" hidden="false">
+        <selectionEntryGroup name="Skills" id="f9ff-e4b3-cfbd-6f50" hidden="false" sortIndex="6">
           <entryLinks>
-            <entryLink import="true" name="Combat Skills" hidden="false" id="6126-f314-25bd-4959" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" sortIndex="1"/>
-            <entryLink import="true" name="Academic Skills" hidden="true" id="ab1d-9fa3-a6a2-38d1" collective="false" targetId="df9d-8724-d362-9d7c" type="selectionEntryGroup" sortIndex="3"/>
             <entryLink import="true" name="Speed Skills" hidden="false" id="968c-0164-3392-09d9" collective="false" targetId="e134-0fdf-67a2-4684" type="selectionEntryGroup" sortIndex="5"/>
             <entryLink import="true" name="Shooting Skills" hidden="false" id="68a6-fefa-386d-65ba" type="selectionEntryGroup" targetId="0073-d2d6-15c0-45b1" sortIndex="2"/>
             <entryLink import="true" name="Strength Skills" hidden="false" id="e595-88e1-37e5-53ec" type="selectionEntryGroup" targetId="e5ac-cd5b-9057-e096" sortIndex="4"/>
-            <entryLink import="true" name="Special Skils (Ork Mob)" hidden="false" id="a799-7c0a-01df-cb03" type="selectionEntryGroup" targetId="15a59018-e588-319b-6ce2-450c80998e97"/>
+            <entryLink import="true" name="Special Skils (Orc Mob)" hidden="false" id="a799-7c0a-01df-cb03" type="selectionEntryGroup" targetId="15a59018-e588-319b-6ce2-450c80998e97" sortIndex="6"/>
+            <entryLink import="true" name="Academic Skills" hidden="true" id="2bb5-1f1b-4f03-a412" collective="false" targetId="df9d-8724-d362-9d7c" type="selectionEntryGroup" collapsible="true" sortIndex="3">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="d2d6-d7bc-b8d0-2d4f" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Combat Skills" hidden="false" id="96d3-9b71-260f-519c" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" collapsible="true" sortIndex="1">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="8694-4257-c1f0-6889" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Alchemist’s notebook" hidden="false" id="d2d6-d7bc-b8d0-2d4f" sortIndex="7">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b3eb-fa31-292a-bf3a"/>
+              </constraints>
+              <rules>
+                <rule name="(2 2 2 2 2) Alchemist’s Laboratory" id="b1ea-a3e6-8a99-27b7" hidden="false">
+                  <description>In the ruins you find loot worth 3D6 gc and a battered old notebook. One of your Heroes may study the Alchemist’s notebook, and the extra wisdom he gains will enable him to choose from Academic skills whenever he gains a new skill in addition to those skills normally available to him.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Training manual" hidden="true" id="8694-4257-c1f0-6889" sortIndex="8">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dd0b-d7da-5853-41e7"/>
+              </constraints>
+              <rules>
+                <rule name="(5 5 5 5 5 5) Fighting Arena" id="72a2-73ca-9b2b-4a04" hidden="false">
+                  <description>You find a training manual, which you can either sell for 100 gc or let one of your Heroes read. The extra knowledge your Hero gleans from reading the manual entitles him to choose from Combat skills whenever he gains a new skill, and his WS may now be increased by an extra point above his normal racial maximum (for example, a Human who has the book would now have a maximum Weapon Skill of 7).</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -910,10 +1004,10 @@ Goblins are far too afraid of Orcs to challenge them individually.</description>
         <categoryLink id="16763088-15c1-4f72-fdfe-153003be4a24-f9b08d8e-4922-78d5-78ad-2047bff52dc8" hidden="false" targetId="f9b08d8e-4922-78d5-78ad-2047bff52dc8" primary="true" name="Henchmen"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink import="true" name="Characteristic Increases" hidden="false" id="488a-db13-8b8b-110a" collective="false" targetId="36e117d8-419f-59b9-e337-512db3c6c990" type="selectionEntryGroup" collapsible="true"/>
-        <entryLink import="true" name="Experience" hidden="false" id="5dcb-cbde-a075-841e" type="selectionEntry" targetId="d769-0d85-e810-df60"/>
-        <entryLink import="true" name="Promoted" hidden="false" id="f5ed-fbbf-92f5-3ac6" collective="false" targetId="534a-6ec6-5d82-da7f" type="selectionEntry"/>
-        <entryLink import="true" name="Skills" hidden="true" id="3c1a-d5e5-ae7d-2ada" collective="false" targetId="70b9-9a07-4088-7598" type="selectionEntryGroup" collapsible="true">
+        <entryLink import="true" name="Characteristic Increases" hidden="false" id="488a-db13-8b8b-110a" collective="false" targetId="36e117d8-419f-59b9-e337-512db3c6c990" type="selectionEntryGroup" collapsible="true" sortIndex="3"/>
+        <entryLink import="true" name="Experience" hidden="false" id="5dcb-cbde-a075-841e" type="selectionEntry" targetId="d769-0d85-e810-df60" sortIndex="2"/>
+        <entryLink import="true" name="Promoted" hidden="false" id="f5ed-fbbf-92f5-3ac6" collective="false" targetId="534a-6ec6-5d82-da7f" type="selectionEntry" sortIndex="4"/>
+        <entryLink import="true" name="Skills" hidden="true" id="3c1a-d5e5-ae7d-2ada" collective="false" targetId="70b9-9a07-4088-7598" type="selectionEntryGroup" collapsible="true" sortIndex="7">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditions>
@@ -924,7 +1018,7 @@ Goblins are far too afraid of Orcs to challenge them individually.</description>
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Special Skills" hidden="false" id="9124-a4af-4075-f088" collapsible="true">
               <entryLinks>
-                <entryLink import="true" name="Special Skils (Ork Mob)" hidden="false" id="57b6-ed54-b66c-3676" type="selectionEntryGroup" targetId="15a59018-e588-319b-6ce2-450c80998e97"/>
+                <entryLink import="true" name="Special Skils (Orc Mob)" hidden="false" id="57b6-ed54-b66c-3676" type="selectionEntryGroup" targetId="15a59018-e588-319b-6ce2-450c80998e97"/>
               </entryLinks>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3320-8281-4dcb-3471" includeChildSelections="false"/>
@@ -932,7 +1026,7 @@ Goblins are far too afraid of Orcs to challenge them individually.</description>
             </selectionEntry>
           </selectionEntries>
         </entryLink>
-        <entryLink import="true" name="Serious Injuries" hidden="true" id="7c49-6310-f4de-97a1" collective="false" targetId="313b-a816-0a89-926c" type="selectionEntryGroup">
+        <entryLink import="true" name="Serious Injuries" hidden="true" id="7c49-6310-f4de-97a1" collective="false" targetId="313b-a816-0a89-926c" type="selectionEntryGroup" sortIndex="8">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditions>
@@ -943,7 +1037,7 @@ Goblins are far too afraid of Orcs to challenge them individually.</description>
         </entryLink>
       </entryLinks>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Orc Boyz" hidden="false" id="0883-8c85-c494-fd41">
+        <selectionEntry type="model" import="true" name="Orc Boyz" hidden="false" id="0883-8c85-c494-fd41" sortIndex="1">
           <costs>
             <cost name=" gc" typeId="points" value="25"/>
             <cost name=" Warband Rating" typeId="wb-rating" value="5"/>
@@ -972,7 +1066,7 @@ Goblins are far too afraid of Orcs to challenge them individually.</description>
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Orcs)" hidden="false" id="56b1-1346-b89f-765e">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Orcs)" hidden="false" id="56b1-1346-b89f-765e" sortIndex="5" collapsible="true">
           <selectionEntryGroups>
             <selectionEntryGroup name="Armour" id="ccb8-351a-9a85-98c2" hidden="false" sortIndex="3">
               <entryLinks>
@@ -1023,11 +1117,10 @@ Goblins are far too afraid of Orcs to challenge them individually.</description>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ac5e-fd04-98aa-ba45" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="05ba-4390-0ac7-3dde" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Trading Post" hidden="true" id="465f-58d2-dc17-c62a" collective="false">
+        <selectionEntry type="upgrade" import="true" name="Trading Post" hidden="false" id="465f-58d2-dc17-c62a" collective="false" sortIndex="6">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditions>
@@ -1172,7 +1265,7 @@ Goblins are far too afraid of Orcs to challenge them individually.</description>
         <categoryLink id="93700e68-f80c-ad1c-b5cd-06fd3c7e7537-a0fce0bc-02e0-a064-7a39-5b97ff8a9c94" hidden="false" targetId="a0fce0bc-02e0-a064-7a39-5b97ff8a9c94" primary="true" name="Heroes"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="b3b56079-facf-6729-653c-6baa94f68b74" name="Magic" page="0" hidden="false" collective="false" import="true" type="upgrade" collapsible="true">
+        <selectionEntry id="b3b56079-facf-6729-653c-6baa94f68b74" name="Magic" page="0" hidden="false" collective="false" import="true" type="upgrade" collapsible="true" sortIndex="7">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>
@@ -1185,7 +1278,7 @@ Goblins are far too afraid of Orcs to challenge them individually.</description>
             <cost name="Warband Rating" typeId="wb-rating" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Trading Post" hidden="false" id="09b2-bb1a-6502-91c0" collective="false">
+        <selectionEntry type="upgrade" import="true" name="Trading Post" hidden="false" id="09b2-bb1a-6502-91c0" collective="false" sortIndex="5">
           <constraints>
             <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="b3d2-e511-a9e0-b208" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8e60-943f-861e-466e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -1199,7 +1292,7 @@ Goblins are far too afraid of Orcs to challenge them individually.</description>
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Orcs)" hidden="false" id="166e-4fda-96b4-bc73">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Orcs)" hidden="false" id="166e-4fda-96b4-bc73" sortIndex="4" collapsible="true">
           <selectionEntryGroups>
             <selectionEntryGroup name="Hand-to-hand Weapons" id="ff5c-2c9b-6c21-2034" hidden="false" sortIndex="1">
               <entryLinks>
@@ -1239,35 +1332,72 @@ Goblins are far too afraid of Orcs to challenge them individually.</description>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bdd1-38f9-aef1-268e" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1401-06e4-26a3-ec52" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="42132d31-b7fe-788f-ab94-390f6e406693" name="Experience" hidden="false" collective="false" import="true" targetId="f0fc009a-7990-32ef-b84b-b631058620e2" type="selectionEntry">
+        <entryLink id="42132d31-b7fe-788f-ab94-390f6e406693" name="Experience" hidden="false" collective="false" import="true" targetId="f0fc009a-7990-32ef-b84b-b631058620e2" type="selectionEntry" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7806-053a-efbc-9919" type="min"/>
           </constraints>
         </entryLink>
-        <entryLink import="true" name="Characteristic Increases" hidden="false" id="cdea-1e90-9490-0843" collective="false" targetId="36e117d8-419f-59b9-e337-512db3c6c990" type="selectionEntryGroup" collapsible="true"/>
-        <entryLink import="true" name="Serious Injuries" hidden="false" id="9427-5a96-8060-738e" collective="false" targetId="313b-a816-0a89-926c" type="selectionEntryGroup"/>
-        <entryLink import="true" name="Spell Caster" hidden="false" id="2f6c-df9b-43f6-6b2c" type="selectionEntry" targetId="3cab-8082-9e74-d378"/>
+        <entryLink import="true" name="Characteristic Increases" hidden="false" id="cdea-1e90-9490-0843" collective="false" targetId="36e117d8-419f-59b9-e337-512db3c6c990" type="selectionEntryGroup" collapsible="true" sortIndex="3"/>
+        <entryLink import="true" name="Serious Injuries" hidden="false" id="9427-5a96-8060-738e" collective="false" targetId="313b-a816-0a89-926c" type="selectionEntryGroup" sortIndex="8"/>
+        <entryLink import="true" name="Spell Caster" hidden="false" id="2f6c-df9b-43f6-6b2c" type="selectionEntry" targetId="3cab-8082-9e74-d378" sortIndex="1"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="40"/>
         <cost name="Warband Rating" typeId="wb-rating" value="5"/>
       </costs>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Skills" id="a9ac-6e3d-1011-5193" hidden="false">
+        <selectionEntryGroup name="Skills" id="a9ac-6e3d-1011-5193" hidden="false" sortIndex="6">
           <entryLinks>
-            <entryLink import="true" name="Combat Skills" hidden="true" id="1e93-2a4f-aacf-0c06" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" sortIndex="1"/>
-            <entryLink import="true" name="Academic Skills" hidden="true" id="fac0-2ec2-b653-07f3" collective="false" targetId="df9d-8724-d362-9d7c" type="selectionEntryGroup" sortIndex="3"/>
             <entryLink import="true" name="Speed Skills" hidden="true" id="7103-2420-1368-f7df" collective="false" targetId="e134-0fdf-67a2-4684" type="selectionEntryGroup" sortIndex="5"/>
             <entryLink import="true" name="Shooting Skills" hidden="true" id="dccc-aade-312a-83ec" type="selectionEntryGroup" targetId="0073-d2d6-15c0-45b1" sortIndex="2"/>
             <entryLink import="true" name="Strength Skills" hidden="false" id="1077-df15-3317-7871" type="selectionEntryGroup" targetId="e5ac-cd5b-9057-e096" sortIndex="4"/>
-            <entryLink import="true" name="Special Skils (Ork Mob)" hidden="false" id="63c4-2390-8db8-a525" type="selectionEntryGroup" targetId="15a59018-e588-319b-6ce2-450c80998e97"/>
+            <entryLink import="true" name="Special Skils (Orc Mob)" hidden="false" id="63c4-2390-8db8-a525" type="selectionEntryGroup" targetId="15a59018-e588-319b-6ce2-450c80998e97" sortIndex="6"/>
+            <entryLink import="true" name="Academic Skills" hidden="true" id="3539-4535-e4a5-39c7" collective="false" targetId="df9d-8724-d362-9d7c" type="selectionEntryGroup" collapsible="true" sortIndex="3">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="4e9d-66cf-3003-d7ea" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Combat Skills" hidden="true" id="2a9c-22cb-b871-a2b4" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" collapsible="true" sortIndex="1">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="392a-b985-c932-4cd6" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Alchemist’s notebook" hidden="false" id="4e9d-66cf-3003-d7ea" sortIndex="7">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1a25-251f-a523-86f0"/>
+              </constraints>
+              <rules>
+                <rule name="(2 2 2 2 2) Alchemist’s Laboratory" id="b936-026c-d285-9291" hidden="false">
+                  <description>In the ruins you find loot worth 3D6 gc and a battered old notebook. One of your Heroes may study the Alchemist’s notebook, and the extra wisdom he gains will enable him to choose from Academic skills whenever he gains a new skill in addition to those skills normally available to him.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Training manual" hidden="false" id="392a-b985-c932-4cd6" sortIndex="8">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="50c1-179e-13f9-fbc9"/>
+              </constraints>
+              <rules>
+                <rule name="(5 5 5 5 5 5) Fighting Arena" id="0d0b-9c76-a790-6e8b" hidden="false">
+                  <description>You find a training manual, which you can either sell for 100 gc or let one of your Heroes read. The extra knowledge your Hero gleans from reading the manual entitles him to choose from Combat skills whenever he gains a new skill, and his WS may now be increased by an extra point above his normal racial maximum (for example, a Human who has the book would now have a maximum Weapon Skill of 7).</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -1706,7 +1836,7 @@ Orcs may only hire the following Hired Swords:
         <entryLink id="f941a52c-a11a-fef5-dd80-d7a857d3789a" hidden="false" collective="false" import="true" targetId="5cce5525-3057-85be-427a-ceeac0d35c53" type="selectionEntryGroup" name="Waaagg magic"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="15a59018-e588-319b-6ce2-450c80998e97" name="Special Skils (Ork Mob)" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="15a59018-e588-319b-6ce2-450c80998e97" name="Special Skils (Orc Mob)" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
         <constraint field="selections" scope="parent" value="-1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="maxSelections" type="max"/>

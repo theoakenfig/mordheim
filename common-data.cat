@@ -5744,7 +5744,31 @@ must retire from the warband.</description>
             <entryLink id="6142-177b-92b0-c95" name="Belaying Pins" hidden="false" collective="false" import="true" targetId="282e-5485-a38c-9f14" type="selectionEntry"/>
           </entryLinks>
         </entryLink>
-        <entryLink id="dc31-0d77-4ab1-91b9" name="Miscellaneous Equipment" hidden="false" collective="false" import="true" targetId="a2cf-6f28-f7c2-275d" type="selectionEntryGroup" sortIndex="4"/>
+        <entryLink id="dc31-0d77-4ab1-91b9" name="Miscellaneous Equipment" hidden="false" collective="false" import="true" targetId="a2cf-6f28-f7c2-275d" type="selectionEntryGroup" sortIndex="4">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Conch Shell Horn" hidden="false" id="0bee-4a29-a689-9abc" collective="false">
+              <rules>
+                <rule name="Conch Shell Horn" id="b0ff-cd05-3e1e-8c5f" hidden="false">
+                  <description>The Conch shell Horn is used by experienced Piranha warriors to warn the warband of approaching enemies.
+
+At the beginning of the game a Piranha warrior may use the horn to re-roll when deciding who deploys first and who goes first.
+Multiple models that have the horn cannot force a second re-roll. (Piranha warriors only)</description>
+                </rule>
+                <rule name="Rare" id="9415-f7ce-15a4-38df" hidden="false">
+                  <description>8</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name=" gc" typeId="points" value="25"/>
+                <cost name=" Warband Rating" typeId="wb-rating" value="0"/>
+                <cost name=" Rarity" typeId="rarity" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden"/>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
+        </entryLink>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="5541-f5c4-85e0-b399" name="Mutations" hidden="false" collective="false" import="true">

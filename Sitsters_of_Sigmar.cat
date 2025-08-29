@@ -137,7 +137,7 @@ In addition, an Augur can use her Blessed Sight to help the Sisterhood when they
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment" hidden="false" id="4dfc-b916-c1cb-fd4a" sortIndex="3">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment" hidden="false" id="4dfc-b916-c1cb-fd4a" sortIndex="3" collapsible="true">
           <selectionEntryGroups>
             <selectionEntryGroup name="Armour" id="6368-d86c-8d84-4f52" hidden="false" sortIndex="3">
               <entryLinks>
@@ -206,7 +206,6 @@ In addition, an Augur can use her Blessed Sight to help the Sisterhood when they
             </selectionEntryGroup>
           </selectionEntryGroups>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d1c1-d992-e4b5-f21e" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cd2d-a3de-9af0-7138" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
@@ -231,10 +230,51 @@ In addition, an Augur can use her Blessed Sight to help the Sisterhood when they
       <selectionEntryGroups>
         <selectionEntryGroup name="Skills" id="6094-0dd8-63ee-5dab" hidden="false" sortIndex="5">
           <entryLinks>
-            <entryLink import="true" name="Academic Skills" hidden="false" id="b3ca-e131-438c-973e" collective="false" targetId="df9d-8724-d362-9d7c" type="selectionEntryGroup" sortIndex="3"/>
             <entryLink import="true" name="Speed Skills" hidden="false" id="e4e6-8827-664f-f518" collective="false" targetId="e134-0fdf-67a2-4684" type="selectionEntryGroup" sortIndex="5"/>
-            <entryLink import="true" name="Special Skills (Sisters)" hidden="false" id="3be0-0b6a-f292-0a41" type="selectionEntryGroup" targetId="bf3da9bd-6711-12b2-2e23-5167d3c0d321" collapsible="true"/>
+            <entryLink import="true" name="Special Skills (Sisters)" hidden="false" id="3be0-0b6a-f292-0a41" type="selectionEntryGroup" targetId="bf3da9bd-6711-12b2-2e23-5167d3c0d321" collapsible="true" sortIndex="6"/>
+            <entryLink import="true" name="Academic Skills" hidden="false" id="b94b-01b5-3f41-e2db" collective="false" targetId="df9d-8724-d362-9d7c" type="selectionEntryGroup" collapsible="true" sortIndex="3">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="f756-ba55-6b35-4b7a" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Combat Skills" hidden="true" id="9915-fe39-44a3-f2ab" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" collapsible="true" sortIndex="1">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="5271-006d-77b5-ef5c" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Shooting Skills" hidden="true" id="51ef-f818-d1b8-b6b0" type="selectionEntryGroup" targetId="0073-d2d6-15c0-45b1" sortIndex="2"/>
+            <entryLink import="true" name="Strength Skills" hidden="true" id="4385-8f8a-eaf8-331a" type="selectionEntryGroup" targetId="e5ac-cd5b-9057-e096" sortIndex="4"/>
           </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Alchemist’s notebook" hidden="true" id="f756-ba55-6b35-4b7a" sortIndex="7">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e692-35a0-a754-cabb"/>
+              </constraints>
+              <rules>
+                <rule name="(2 2 2 2 2) Alchemist’s Laboratory" id="3d8f-5869-8731-6a92" hidden="false">
+                  <description>In the ruins you find loot worth 3D6 gc and a battered old notebook. One of your Heroes may study the Alchemist’s notebook, and the extra wisdom he gains will enable him to choose from Academic skills whenever he gains a new skill in addition to those skills normally available to him.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Training manual" hidden="false" id="5271-006d-77b5-ef5c" sortIndex="8">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="47f4-f478-ce87-fbb0"/>
+              </constraints>
+              <rules>
+                <rule name="(5 5 5 5 5 5) Fighting Arena" id="992f-a344-3e87-9bdd" hidden="false">
+                  <description>You find a training manual, which you can either sell for 100 gc or let one of your Heroes read. The extra knowledge your Hero gleans from reading the manual entitles him to choose from Combat skills whenever he gains a new skill, and his WS may now be increased by an extra point above his normal racial maximum (for example, a Human who has the book would now have a maximum Weapon Skill of 7).</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -383,7 +423,7 @@ In addition, an Augur can use her Blessed Sight to help the Sisterhood when they
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Trading Post" hidden="true" id="bddc-7bc8-e6a3-b3c1" collective="false" sortIndex="6">
+        <selectionEntry type="upgrade" import="true" name="Trading Post" hidden="false" id="bddc-7bc8-e6a3-b3c1" collective="false" sortIndex="6">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditions>
@@ -404,7 +444,7 @@ In addition, an Augur can use her Blessed Sight to help the Sisterhood when they
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment" hidden="false" id="c222-1fad-383b-cf92" sortIndex="5">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment" hidden="false" id="c222-1fad-383b-cf92" sortIndex="5" collapsible="true">
           <selectionEntryGroups>
             <selectionEntryGroup name="Armour" id="9608-6205-cd62-61e7" hidden="false" sortIndex="3">
               <entryLinks>
@@ -473,7 +513,6 @@ In addition, an Augur can use her Blessed Sight to help the Sisterhood when they
             </selectionEntryGroup>
           </selectionEntryGroups>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c3b8-ed81-2b1b-6833" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5f13-ca7d-a4dc-735e" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
@@ -665,7 +704,7 @@ In addition, an Augur can use her Blessed Sight to help the Sisterhood when they
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment" hidden="false" id="3ccd-67c8-f3e8-3711" sortIndex="5">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment" hidden="false" id="3ccd-67c8-f3e8-3711" sortIndex="5" collapsible="true">
           <selectionEntryGroups>
             <selectionEntryGroup name="Armour" id="8282-2f6b-b7c1-5d47" hidden="false" sortIndex="3">
               <entryLinks>
@@ -734,7 +773,6 @@ In addition, an Augur can use her Blessed Sight to help the Sisterhood when they
             </selectionEntryGroup>
           </selectionEntryGroups>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4492-0b17-eb9a-2b92" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c1c1-eb40-c0cb-7ec1" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
@@ -761,12 +799,51 @@ In addition, an Augur can use her Blessed Sight to help the Sisterhood when they
       <selectionEntryGroups>
         <selectionEntryGroup name="Skills" id="8ffa-806b-02fb-718c" hidden="false" sortIndex="7">
           <entryLinks>
-            <entryLink import="true" name="Combat Skills" hidden="false" id="1da8-c9d1-d25a-60d2" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" sortIndex="1"/>
-            <entryLink import="true" name="Academic Skills" hidden="false" id="2c2e-5755-0e15-ef90" collective="false" targetId="df9d-8724-d362-9d7c" type="selectionEntryGroup" sortIndex="3"/>
             <entryLink import="true" name="Speed Skills" hidden="false" id="373a-f939-b4cb-7546" collective="false" targetId="e134-0fdf-67a2-4684" type="selectionEntryGroup" sortIndex="5"/>
             <entryLink import="true" name="Strength Skills" hidden="false" id="6b9c-51c2-8502-57ce" type="selectionEntryGroup" targetId="e5ac-cd5b-9057-e096" sortIndex="4"/>
-            <entryLink import="true" name="Special Skills (Sisters)" hidden="false" id="a0c1-02ed-7672-37a8" type="selectionEntryGroup" targetId="bf3da9bd-6711-12b2-2e23-5167d3c0d321" collapsible="true"/>
+            <entryLink import="true" name="Special Skills (Sisters)" hidden="false" id="a0c1-02ed-7672-37a8" type="selectionEntryGroup" targetId="bf3da9bd-6711-12b2-2e23-5167d3c0d321" collapsible="true" sortIndex="6"/>
+            <entryLink import="true" name="Combat Skills" hidden="false" id="effb-924b-0cab-2de6" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" collapsible="true" sortIndex="1">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="530c-808a-f17a-c075" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Academic Skills" hidden="false" id="bec4-da1e-9ac3-94ff" collective="false" targetId="df9d-8724-d362-9d7c" type="selectionEntryGroup" collapsible="true" sortIndex="3">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="7c63-0ece-4a53-bb64" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Shooting Skills" hidden="true" id="23b5-f17f-57e6-4339" type="selectionEntryGroup" targetId="0073-d2d6-15c0-45b1" sortIndex="2"/>
           </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Alchemist’s notebook" hidden="true" id="7c63-0ece-4a53-bb64" sortIndex="7">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c1b0-8050-30c5-4eff"/>
+              </constraints>
+              <rules>
+                <rule name="(2 2 2 2 2) Alchemist’s Laboratory" id="13a6-8258-b714-5fda" hidden="false">
+                  <description>In the ruins you find loot worth 3D6 gc and a battered old notebook. One of your Heroes may study the Alchemist’s notebook, and the extra wisdom he gains will enable him to choose from Academic skills whenever he gains a new skill in addition to those skills normally available to him.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Training manual" hidden="true" id="530c-808a-f17a-c075" sortIndex="8">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="24a0-ec05-b79a-1506"/>
+              </constraints>
+              <rules>
+                <rule name="(5 5 5 5 5 5) Fighting Arena" id="8a99-f457-984c-70fd" hidden="false">
+                  <description>You find a training manual, which you can either sell for 100 gc or let one of your Heroes read. The extra knowledge your Hero gleans from reading the manual entitles him to choose from Combat skills whenever he gains a new skill, and his WS may now be increased by an extra point above his normal racial maximum (for example, a Human who has the book would now have a maximum Weapon Skill of 7).</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -899,7 +976,7 @@ In addition, an Augur can use her Blessed Sight to help the Sisterhood when they
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment" hidden="false" id="c202-6b59-d34e-182c" sortIndex="3">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment" hidden="false" id="c202-6b59-d34e-182c" sortIndex="3" collapsible="true">
           <selectionEntryGroups>
             <selectionEntryGroup name="Armour" id="5693-0d92-cff8-c085" hidden="false" sortIndex="3">
               <entryLinks>
@@ -968,7 +1045,6 @@ In addition, an Augur can use her Blessed Sight to help the Sisterhood when they
             </selectionEntryGroup>
           </selectionEntryGroups>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="11e8-5115-ff68-3db6" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9352-ba2c-cf8c-1a4f" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
@@ -991,14 +1067,53 @@ In addition, an Augur can use her Blessed Sight to help the Sisterhood when they
         <cost name="Warband Rating" typeId="wb-rating" value="5"/>
       </costs>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Skills" id="649a-7e1d-2a6b-eef4" hidden="false" sortIndex="5">
+        <selectionEntryGroup name="Skills" id="41b7-1bb0-9a3c-01d8" hidden="false" sortIndex="5">
           <entryLinks>
-            <entryLink import="true" name="Combat Skills" hidden="false" id="36f0-4409-1b40-908e" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" sortIndex="1"/>
-            <entryLink import="true" name="Academic Skills" hidden="false" id="2bd8-e8f7-86b1-db91" collective="false" targetId="df9d-8724-d362-9d7c" type="selectionEntryGroup" sortIndex="3"/>
-            <entryLink import="true" name="Speed Skills" hidden="false" id="9987-477e-afea-7283" collective="false" targetId="e134-0fdf-67a2-4684" type="selectionEntryGroup" sortIndex="5"/>
-            <entryLink import="true" name="Strength Skills" hidden="false" id="6e79-4102-8bf2-ace6" type="selectionEntryGroup" targetId="e5ac-cd5b-9057-e096" sortIndex="4"/>
-            <entryLink import="true" name="Special Skills (Sisters)" hidden="false" id="d842-0e9a-9451-1ec5" type="selectionEntryGroup" targetId="bf3da9bd-6711-12b2-2e23-5167d3c0d321" collapsible="true"/>
+            <entryLink import="true" name="Speed Skills" hidden="false" id="dead-b4b3-dd93-4667" collective="false" targetId="e134-0fdf-67a2-4684" type="selectionEntryGroup" sortIndex="5"/>
+            <entryLink import="true" name="Strength Skills" hidden="false" id="dec6-5a04-dab3-5851" type="selectionEntryGroup" targetId="e5ac-cd5b-9057-e096" sortIndex="4"/>
+            <entryLink import="true" name="Special Skills (Sisters)" hidden="false" id="936d-ed9b-d1d4-1634" type="selectionEntryGroup" targetId="bf3da9bd-6711-12b2-2e23-5167d3c0d321" collapsible="true" sortIndex="6"/>
+            <entryLink import="true" name="Combat Skills" hidden="false" id="bb7a-68bb-b268-73c8" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" collapsible="true" sortIndex="1">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="ba16-6722-0128-52e2" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Academic Skills" hidden="false" id="989e-c534-1279-ed51" collective="false" targetId="df9d-8724-d362-9d7c" type="selectionEntryGroup" collapsible="true" sortIndex="3">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="f002-c369-6e09-1565" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Shooting Skills" hidden="true" id="479d-58d9-a6d9-7bc3" type="selectionEntryGroup" targetId="0073-d2d6-15c0-45b1" sortIndex="2"/>
           </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Alchemist’s notebook" hidden="true" id="f002-c369-6e09-1565" sortIndex="7">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4b14-d804-aa90-0acd"/>
+              </constraints>
+              <rules>
+                <rule name="(2 2 2 2 2) Alchemist’s Laboratory" id="c7ec-eeeb-c8d3-5e03" hidden="false">
+                  <description>In the ruins you find loot worth 3D6 gc and a battered old notebook. One of your Heroes may study the Alchemist’s notebook, and the extra wisdom he gains will enable him to choose from Academic skills whenever he gains a new skill in addition to those skills normally available to him.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Training manual" hidden="true" id="ba16-6722-0128-52e2" sortIndex="8">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="52f0-6a2a-94c7-13b1"/>
+              </constraints>
+              <rules>
+                <rule name="(5 5 5 5 5 5) Fighting Arena" id="b15d-aadd-9702-e972" hidden="false">
+                  <description>You find a training manual, which you can either sell for 100 gc or let one of your Heroes read. The extra knowledge your Hero gleans from reading the manual entitles him to choose from Combat skills whenever he gains a new skill, and his WS may now be increased by an extra point above his normal racial maximum (for example, a Human who has the book would now have a maximum Weapon Skill of 7).</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -1143,7 +1258,7 @@ In addition, an Augur can use her Blessed Sight to help the Sisterhood when they
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment" hidden="false" id="d688-bcd9-623c-35ad" sortIndex="5">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment" hidden="false" id="d688-bcd9-623c-35ad" sortIndex="5" collapsible="true">
           <selectionEntryGroups>
             <selectionEntryGroup name="Armour" id="b5a4-d3ab-a47a-c52c" hidden="false" sortIndex="3">
               <entryLinks>
@@ -1212,11 +1327,10 @@ In addition, an Augur can use her Blessed Sight to help the Sisterhood when they
             </selectionEntryGroup>
           </selectionEntryGroups>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0363-a5f2-e09c-deb0" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bf05-ffe5-889e-36ff" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Trading Post" hidden="true" id="7f48-7be4-583e-5d51" collective="false" sortIndex="6">
+        <selectionEntry type="upgrade" import="true" name="Trading Post" hidden="false" id="7f48-7be4-583e-5d51" collective="false" sortIndex="6">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditions>

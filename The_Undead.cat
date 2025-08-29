@@ -376,7 +376,7 @@ Dire Wolves fight with 2 attacks instead of 1 during the turn they charge.</desc
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Undead)" hidden="false" id="7cb0-4a2b-3aeb-75d6" sortIndex="3">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Undead)" hidden="false" id="7cb0-4a2b-3aeb-75d6" sortIndex="3" collapsible="true">
           <selectionEntryGroups>
             <selectionEntryGroup name="Armour" id="fff1-0a36-dcf7-dfb2" hidden="false" sortIndex="3">
               <entryLinks>
@@ -428,7 +428,6 @@ Dire Wolves fight with 2 attacks instead of 1 during the turn they charge.</desc
             </selectionEntryGroup>
           </selectionEntryGroups>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="13d2-cf4d-3a76-5feb" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9330-3c18-1b21-34d1" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
@@ -453,9 +452,50 @@ Dire Wolves fight with 2 attacks instead of 1 during the turn they charge.</desc
       <selectionEntryGroups>
         <selectionEntryGroup name="Skills" id="e0c4-4913-4b2a-7196" hidden="false" sortIndex="5">
           <entryLinks>
-            <entryLink import="true" name="Combat Skills" hidden="false" id="0c80-0389-9851-25a8" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" sortIndex="1"/>
             <entryLink import="true" name="Strength Skills" hidden="false" id="cd23-4df5-11b5-a70a" type="selectionEntryGroup" targetId="e5ac-cd5b-9057-e096" sortIndex="4"/>
+            <entryLink import="true" name="Combat Skills" hidden="false" id="4151-947e-921c-4181" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" collapsible="true" sortIndex="1">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="c40c-b250-0e0e-894e" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Shooting Skills" hidden="true" id="c1fc-8f07-4813-beb1" type="selectionEntryGroup" targetId="0073-d2d6-15c0-45b1" sortIndex="2"/>
+            <entryLink import="true" name="Academic Skills" hidden="true" id="e0b6-c130-b5f4-30ed" collective="false" targetId="df9d-8724-d362-9d7c" type="selectionEntryGroup" collapsible="true" sortIndex="3">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="32b8-3437-40bb-7841" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Speed Skills" hidden="true" id="109c-9475-9360-425e" collective="false" targetId="e134-0fdf-67a2-4684" type="selectionEntryGroup" sortIndex="5"/>
           </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Training manual" hidden="true" id="c40c-b250-0e0e-894e" sortIndex="7">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="55f8-b010-c98c-aa08"/>
+              </constraints>
+              <rules>
+                <rule name="(5 5 5 5 5 5) Fighting Arena" id="a83c-d6b9-1650-7299" hidden="false">
+                  <description>You find a training manual, which you can either sell for 100 gc or let one of your Heroes read. The extra knowledge your Hero gleans from reading the manual entitles him to choose from Combat skills whenever he gains a new skill, and his WS may now be increased by an extra point above his normal racial maximum (for example, a Human who has the book would now have a maximum Weapon Skill of 7).</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Alchemist’s notebook" hidden="false" id="32b8-3437-40bb-7841" sortIndex="6">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="41d3-290f-88fa-4bd8"/>
+              </constraints>
+              <rules>
+                <rule name="(2 2 2 2 2) Alchemist’s Laboratory" id="e537-662b-ff82-9361" hidden="false">
+                  <description>In the ruins you find loot worth 3D6 gc and a battered old notebook. One of your Heroes may study the Alchemist’s notebook, and the extra wisdom he gains will enable him to choose from Academic skills whenever he gains a new skill in addition to those skills normally available to him.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -603,12 +643,33 @@ Dire Wolves fight with 2 attacks instead of 1 during the turn they charge.</desc
             </modifier>
           </modifiers>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Trading Post" hidden="true" id="13a5-d93d-5304-aa34" collective="false" sortIndex="5">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="parent" childId="534a-6ec6-5d82-da7f" shared="true" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="286f-6bf1-addb-6281" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="409a-c7ba-41fa-d93a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Equipment" hidden="false" id="f42c-cbad-3368-da26" collective="false" targetId="2247-1f56-bc59-0ead" type="selectionEntryGroup"/>
+          </entryLinks>
+          <costs>
+            <cost name=" gc" typeId="points" value="0"/>
+            <cost name=" Warband Rating" typeId="wb-rating" value="0"/>
+            <cost name=" Rarity" typeId="rarity" value="0"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink import="true" name="Characteristic Increases" hidden="false" id="1546-f3d1-e9c0-737f" collective="false" targetId="36e117d8-419f-59b9-e337-512db3c6c990" type="selectionEntryGroup" sortIndex="3" collapsible="true"/>
         <entryLink import="true" name="Experience" hidden="false" id="5f26-ae25-b7c5-9a29" type="selectionEntry" targetId="d769-0d85-e810-df60" sortIndex="2"/>
         <entryLink import="true" name="Promoted" hidden="false" id="068d-9b97-a25d-6a4f" collective="false" targetId="534a-6ec6-5d82-da7f" type="selectionEntry" sortIndex="4"/>
-        <entryLink import="true" name="Serious Injuries" hidden="true" id="f23e-8666-366f-e6b7" collective="false" targetId="313b-a816-0a89-926c" type="selectionEntryGroup" sortIndex="6">
+        <entryLink import="true" name="Serious Injuries" hidden="true" id="f23e-8666-366f-e6b7" collective="false" targetId="313b-a816-0a89-926c" type="selectionEntryGroup" sortIndex="7">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditions>
@@ -617,7 +678,7 @@ Dire Wolves fight with 2 attacks instead of 1 during the turn they charge.</desc
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink import="true" name="Skills" hidden="true" id="5f0c-4ff0-0f7f-40cd" collective="false" targetId="70b9-9a07-4088-7598" type="selectionEntryGroup" collapsible="true" sortIndex="5">
+        <entryLink import="true" name="Skills" hidden="true" id="5f0c-4ff0-0f7f-40cd" collective="false" targetId="70b9-9a07-4088-7598" type="selectionEntryGroup" collapsible="true" sortIndex="6">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditions>
@@ -780,7 +841,7 @@ Dire Wolves fight with 2 attacks instead of 1 during the turn they charge.</desc
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Undead)" hidden="false" id="b4fc-8d60-a94c-5e3b" sortIndex="4">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Undead)" hidden="false" id="b4fc-8d60-a94c-5e3b" sortIndex="4" collapsible="true">
           <selectionEntryGroups>
             <selectionEntryGroup name="Armour" id="5c5a-8601-383d-2251" hidden="false" sortIndex="3">
               <entryLinks>
@@ -832,7 +893,6 @@ Dire Wolves fight with 2 attacks instead of 1 during the turn they charge.</desc
             </selectionEntryGroup>
           </selectionEntryGroups>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a7af-b202-1a34-84ee" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2f42-9188-758c-b84f" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
@@ -862,9 +922,50 @@ Dire Wolves fight with 2 attacks instead of 1 during the turn they charge.</desc
       <selectionEntryGroups>
         <selectionEntryGroup name="Skills" id="deb4-9fe4-1db9-509d" hidden="false" sortIndex="6">
           <entryLinks>
-            <entryLink import="true" name="Academic Skills" hidden="false" id="a4b8-b1b3-0bea-8309" collective="false" targetId="df9d-8724-d362-9d7c" type="selectionEntryGroup" sortIndex="3"/>
             <entryLink import="true" name="Speed Skills" hidden="false" id="6c1a-89a9-59e2-36d1" collective="false" targetId="e134-0fdf-67a2-4684" type="selectionEntryGroup" sortIndex="5"/>
+            <entryLink import="true" name="Academic Skills" hidden="false" id="1ea1-6a39-576d-a489" collective="false" targetId="df9d-8724-d362-9d7c" type="selectionEntryGroup" collapsible="true" sortIndex="3">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="1da8-7970-3b63-9570" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Shooting Skills" hidden="true" id="45e6-e928-9ff7-148e" type="selectionEntryGroup" targetId="0073-d2d6-15c0-45b1" sortIndex="2"/>
+            <entryLink import="true" name="Combat Skills" hidden="true" id="1e69-d790-46b1-1772" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" collapsible="true" sortIndex="1">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="3340-fd52-4c67-e191" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Strength Skills" hidden="true" id="80a5-29ac-6fd2-55da" type="selectionEntryGroup" targetId="e5ac-cd5b-9057-e096" sortIndex="4"/>
           </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Alchemist’s notebook" hidden="true" id="1da8-7970-3b63-9570" sortIndex="6">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="00f8-98a9-c354-c92c"/>
+              </constraints>
+              <rules>
+                <rule name="(2 2 2 2 2) Alchemist’s Laboratory" id="bd97-c3b7-f119-dfd4" hidden="false">
+                  <description>In the ruins you find loot worth 3D6 gc and a battered old notebook. One of your Heroes may study the Alchemist’s notebook, and the extra wisdom he gains will enable him to choose from Academic skills whenever he gains a new skill in addition to those skills normally available to him.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Training manual" hidden="false" id="3340-fd52-4c67-e191" sortIndex="7">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f034-ce18-ba53-df92"/>
+              </constraints>
+              <rules>
+                <rule name="(5 5 5 5 5 5) Fighting Arena" id="7ca6-3d77-f0e4-77b0" hidden="false">
+                  <description>You find a training manual, which you can either sell for 100 gc or let one of your Heroes read. The extra knowledge your Hero gleans from reading the manual entitles him to choose from Combat skills whenever he gains a new skill, and his WS may now be increased by an extra point above his normal racial maximum (for example, a Human who has the book would now have a maximum Weapon Skill of 7).</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -1049,7 +1150,7 @@ Dire Wolves fight with 2 attacks instead of 1 during the turn they charge.</desc
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Undead)" hidden="false" id="8b34-d0a0-21bf-7359" sortIndex="4">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Undead)" hidden="false" id="8b34-d0a0-21bf-7359" sortIndex="4" collapsible="true">
           <selectionEntryGroups>
             <selectionEntryGroup name="Armour" id="2d41-5856-5ccb-6daa" hidden="false" sortIndex="3">
               <entryLinks>
@@ -1101,7 +1202,6 @@ Dire Wolves fight with 2 attacks instead of 1 during the turn they charge.</desc
             </selectionEntryGroup>
           </selectionEntryGroups>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c804-3162-080f-2b15" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a758-0f34-73af-5787" includeChildSelections="false"/>
           </constraints>
         </selectionEntry>
@@ -1131,11 +1231,50 @@ Dire Wolves fight with 2 attacks instead of 1 during the turn they charge.</desc
       <selectionEntryGroups>
         <selectionEntryGroup name="Skills" id="6314-5143-9d82-ca3f" hidden="false" sortIndex="6">
           <entryLinks>
-            <entryLink import="true" name="Combat Skills" hidden="false" id="03ab-e7d0-0619-bcf3" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" sortIndex="1"/>
-            <entryLink import="true" name="Academic Skills" hidden="false" id="f290-43fd-6d34-27ac" collective="false" targetId="df9d-8724-d362-9d7c" type="selectionEntryGroup" sortIndex="3"/>
             <entryLink import="true" name="Speed Skills" hidden="false" id="9cfe-a79f-1884-6edb" collective="false" targetId="e134-0fdf-67a2-4684" type="selectionEntryGroup" sortIndex="5"/>
             <entryLink import="true" name="Strength Skills" hidden="false" id="84f8-8b4f-e0b4-293d" type="selectionEntryGroup" targetId="e5ac-cd5b-9057-e096" sortIndex="4"/>
+            <entryLink import="true" name="Combat Skills" hidden="false" id="cfc1-cc96-00e0-4383" collective="false" targetId="ee2c-89e3-489b-d0cb" type="selectionEntryGroup" collapsible="true" sortIndex="1">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="de9f-b061-f4e7-c6c6" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Academic Skills" hidden="false" id="9a00-207a-f777-d099" collective="false" targetId="df9d-8724-d362-9d7c" type="selectionEntryGroup" collapsible="true" sortIndex="3">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="7d3a-c7f6-5e2e-2f01" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Shooting Skills" hidden="true" id="4d67-b7c7-f981-dea3" type="selectionEntryGroup" targetId="0073-d2d6-15c0-45b1" sortIndex="2"/>
           </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Training manual" hidden="true" id="de9f-b061-f4e7-c6c6" sortIndex="7">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b80c-b110-da5e-9f72"/>
+              </constraints>
+              <rules>
+                <rule name="(5 5 5 5 5 5) Fighting Arena" id="6d78-1bdb-b876-1780" hidden="false">
+                  <description>You find a training manual, which you can either sell for 100 gc or let one of your Heroes read. The extra knowledge your Hero gleans from reading the manual entitles him to choose from Combat skills whenever he gains a new skill, and his WS may now be increased by an extra point above his normal racial maximum (for example, a Human who has the book would now have a maximum Weapon Skill of 7).</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Alchemist’s notebook" hidden="true" id="7d3a-c7f6-5e2e-2f01" sortIndex="6">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2468-9b64-08b4-a26c"/>
+              </constraints>
+              <rules>
+                <rule name="(2 2 2 2 2) Alchemist’s Laboratory" id="e59d-445c-7652-e667" hidden="false">
+                  <description>In the ruins you find loot worth 3D6 gc and a battered old notebook. One of your Heroes may study the Alchemist’s notebook, and the extra wisdom he gains will enable him to choose from Academic skills whenever he gains a new skill in addition to those skills normally available to him.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
