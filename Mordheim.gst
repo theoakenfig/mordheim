@@ -54,10 +54,12 @@
     <categoryEntry id="a31acb39-8ce9-d6d7-bcc9-f3144d63db48" name="Stash" hidden="false"/>
     <categoryEntry id="0aea-26b8-980b-28aa" name="Dramatis Personae" hidden="false"/>
     <categoryEntry id="71f7-5ee6-ab09-7fd9" name="Hired Swords" hidden="false"/>
+    <categoryEntry name="Configuration" id="4852-c4cb-82b0-b7fa" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="7451d7da-3cc0-0299-775b-2f48162a731d" name="Warband" hidden="false" sortIndex="1">
       <categoryLinks>
+        <categoryLink name="Configuration" hidden="false" id="5d45-3d8d-79db-5458" targetId="4852-c4cb-82b0-b7fa" type="categoryEntry"/>
         <categoryLink id="7451d7da-3cc0-0299-775b-2f48162a731d-a0fce0bc-02e0-a064-7a39-5b97ff8a9c94" name="Heroes" hidden="false" targetId="a0fce0bc-02e0-a064-7a39-5b97ff8a9c94" primary="false">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>

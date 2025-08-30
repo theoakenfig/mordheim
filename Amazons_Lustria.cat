@@ -1608,4 +1608,15 @@ Lizardmen and Undead are immune to the effects of this ritual.</characteristic>
   <catalogueLinks>
     <catalogueLink id="721b-9624-66b8-f3a6" name="common-data" targetId="e020-c282-277b-b173" type="catalogue" importRootEntries="true"/>
   </catalogueLinks>
+  <entryLinks>
+    <entryLink import="true" name="Grade" hidden="false" id="1743-28bf-c7fc-1d16" type="selectionEntryGroup" targetId="3394-366e-74c0-2277">
+      <categoryLinks>
+        <categoryLink targetId="4852-c4cb-82b0-b7fa" id="6685-e23a-8fdf-ddf6" primary="true" name="Configuration"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="791e-2684-0b08-e047-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="791e-2684-0b08-e047-max"/>
+      </constraints>
+    </entryLink>
+  </entryLinks>
 </catalogue>
