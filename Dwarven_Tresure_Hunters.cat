@@ -142,9 +142,9 @@
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Dwarf Warrior)" hidden="false" id="9d66-2134-9f53-7525" sortIndex="5" collapsible="true">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Dwarf Warrior)" hidden="false" id="9d66-2134-9f53-7525" sortIndex="5" collapsible="false">
           <selectionEntryGroups>
-            <selectionEntryGroup name="Armour" id="62bb-989f-b3b7-7a07" hidden="false" sortIndex="3">
+            <selectionEntryGroup name="Armour" id="62bb-989f-b3b7-7a07" hidden="false" sortIndex="3" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Helmet" hidden="false" id="6e90-176d-109f-b6a5" collective="false" targetId="d0e5-ca89-5f0d-f5d2" type="selectionEntry" sortIndex="5">
                   <constraints>
@@ -157,7 +157,7 @@
                 <entryLink import="true" name="Gromril Armour" hidden="false" id="8e31-9395-04dc-eebe" type="selectionEntry" targetId="4c6d-eb92-53a7-a6d3" sortIndex="3"/>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Hand-to-hand Weapons" id="c85b-3d57-afaf-03e9" hidden="false" sortIndex="1">
+            <selectionEntryGroup name="Hand-to-hand Weapons" id="c85b-3d57-afaf-03e9" hidden="false" sortIndex="1" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Mace" hidden="false" id="a913-33b9-e514-db34" collective="false" targetId="2cbb-013b-3ebf-0459" type="selectionEntry" sortIndex="3"/>
                 <entryLink import="true" name="Dagger" hidden="false" id="3446-fe5e-3b93-41a8" collective="false" targetId="64e0-0bb6-542b-4beb" type="selectionEntry" sortIndex="2"/>
@@ -181,7 +181,7 @@
                 </modifier>
               </modifiers>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Missile Weapons" id="b9a4-6fb2-d9f5-0aa4" hidden="false" sortIndex="2">
+            <selectionEntryGroup name="Missile Weapons" id="b9a4-6fb2-d9f5-0aa4" hidden="false" sortIndex="2" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Pistol" hidden="false" id="ca1d-e80b-148e-740f" type="selectionEntry" targetId="67e9-a4f5-8f76-168c" sortIndex="2"/>
               </entryLinks>
@@ -419,9 +419,9 @@
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Dwarf Warrior)" hidden="false" id="d680-c66a-689d-4224" sortIndex="5" collapsible="true">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Dwarf Warrior)" hidden="false" id="d680-c66a-689d-4224" sortIndex="5" collapsible="false">
           <selectionEntryGroups>
-            <selectionEntryGroup name="Armour" id="e9fd-c89a-017c-ebcf" hidden="false" sortIndex="3">
+            <selectionEntryGroup name="Armour" id="e9fd-c89a-017c-ebcf" hidden="false" sortIndex="3" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Helmet" hidden="false" id="40df-3815-1d33-ee80" collective="false" targetId="d0e5-ca89-5f0d-f5d2" type="selectionEntry" sortIndex="5">
                   <constraints>
@@ -434,7 +434,7 @@
                 <entryLink import="true" name="Gromril Armour" hidden="false" id="bc88-27fb-3d7e-6d29" type="selectionEntry" targetId="4c6d-eb92-53a7-a6d3" sortIndex="3"/>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Hand-to-hand Weapons" id="6ad5-8208-76d0-18e1" hidden="false" sortIndex="1">
+            <selectionEntryGroup name="Hand-to-hand Weapons" id="6ad5-8208-76d0-18e1" hidden="false" sortIndex="1" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Mace" hidden="false" id="e586-3cf4-fd53-1077" collective="false" targetId="2cbb-013b-3ebf-0459" type="selectionEntry" sortIndex="3"/>
                 <entryLink import="true" name="Dagger" hidden="false" id="1044-2924-01f7-45ee" collective="false" targetId="64e0-0bb6-542b-4beb" type="selectionEntry" sortIndex="2"/>
@@ -458,7 +458,7 @@
                 </modifier>
               </modifiers>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Missile Weapons" id="dbba-54db-86d5-623f" hidden="false" sortIndex="2">
+            <selectionEntryGroup name="Missile Weapons" id="dbba-54db-86d5-623f" hidden="false" sortIndex="2" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Pistol" hidden="false" id="d1f8-7e2c-31a9-0e21" type="selectionEntry" targetId="67e9-a4f5-8f76-168c" sortIndex="2"/>
               </entryLinks>
@@ -647,9 +647,9 @@
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Thunderers)" hidden="false" id="09da-14b3-2b35-6563" sortIndex="3" collapsible="true">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Thunderers)" hidden="false" id="09da-14b3-2b35-6563" sortIndex="3" collapsible="false">
           <selectionEntryGroups>
-            <selectionEntryGroup name="Armour" id="b3d7-0568-b446-8da4" hidden="false" sortIndex="3">
+            <selectionEntryGroup name="Armour" id="b3d7-0568-b446-8da4" hidden="false" sortIndex="3" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Helmet" hidden="false" id="7a32-cbd4-1928-775b" collective="false" targetId="d0e5-ca89-5f0d-f5d2" type="selectionEntry" sortIndex="4">
                   <constraints>
@@ -665,7 +665,7 @@
                 </entryLink>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Hand-to-hand Weapons" id="1311-9f25-c7b4-6c05" hidden="false" sortIndex="1">
+            <selectionEntryGroup name="Hand-to-hand Weapons" id="1311-9f25-c7b4-6c05" hidden="false" sortIndex="1" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Mace" hidden="false" id="e335-7e6f-9968-d584" collective="false" targetId="2cbb-013b-3ebf-0459" type="selectionEntry" sortIndex="3"/>
                 <entryLink import="true" name="Dagger" hidden="false" id="e6df-8232-d92d-9411" collective="false" targetId="64e0-0bb6-542b-4beb" type="selectionEntry" sortIndex="2"/>
@@ -685,7 +685,7 @@
                 </modifier>
               </modifiers>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Missile Weapons" id="c7c8-ae5f-ed9d-3baf" hidden="false" sortIndex="2">
+            <selectionEntryGroup name="Missile Weapons" id="c7c8-ae5f-ed9d-3baf" hidden="false" sortIndex="2" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Crossbow" hidden="false" id="9ea6-96c7-a69e-b207" type="selectionEntry" targetId="38cc-bc0b-7f19-8039" sortIndex="2"/>
                 <entryLink import="true" name="Pistol" hidden="false" id="f993-9b02-b0ae-2a6a" type="selectionEntry" targetId="67e9-a4f5-8f76-168c" sortIndex="1"/>
@@ -895,9 +895,9 @@
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Dwarf Warrior)" hidden="false" id="9077-a021-3086-b7c0" sortIndex="4" collapsible="true">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Dwarf Warrior)" hidden="false" id="9077-a021-3086-b7c0" sortIndex="4" collapsible="false">
           <selectionEntryGroups>
-            <selectionEntryGroup name="Armour" id="9d53-c562-a555-e997" hidden="false" sortIndex="3">
+            <selectionEntryGroup name="Armour" id="9d53-c562-a555-e997" hidden="false" sortIndex="3" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Helmet" hidden="false" id="0ac6-d974-c728-bb9a" collective="false" targetId="d0e5-ca89-5f0d-f5d2" type="selectionEntry" sortIndex="5">
                   <constraints>
@@ -910,7 +910,7 @@
                 <entryLink import="true" name="Gromril Armour" hidden="false" id="0f9c-88e7-f948-a597" type="selectionEntry" targetId="4c6d-eb92-53a7-a6d3" sortIndex="3"/>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Hand-to-hand Weapons" id="ab9b-ed8f-e94d-4410" hidden="false" sortIndex="1">
+            <selectionEntryGroup name="Hand-to-hand Weapons" id="ab9b-ed8f-e94d-4410" hidden="false" sortIndex="1" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Mace" hidden="false" id="92e1-3d1f-6ec1-728d" collective="false" targetId="2cbb-013b-3ebf-0459" type="selectionEntry" sortIndex="3"/>
                 <entryLink import="true" name="Dagger" hidden="false" id="b8b9-1d3c-7d1e-03cf" collective="false" targetId="64e0-0bb6-542b-4beb" type="selectionEntry" sortIndex="2"/>
@@ -934,7 +934,7 @@
                 </modifier>
               </modifiers>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Missile Weapons" id="85cb-b660-c383-0563" hidden="false" sortIndex="2">
+            <selectionEntryGroup name="Missile Weapons" id="85cb-b660-c383-0563" hidden="false" sortIndex="2" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Pistol" hidden="false" id="515e-c3ef-270b-0927" type="selectionEntry" targetId="67e9-a4f5-8f76-168c" sortIndex="2"/>
               </entryLinks>
@@ -1012,50 +1012,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-    </selectionEntry>
-    <selectionEntry id="83ade99f-e9ef-d25a-59ac-ca3f3def011c" name="Stash" page="0" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="maxInRoster" type="max"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="83ade99f-e9ef-d25a-59ac-ca3f3def011c-a31acb39-8ce9-d6d7-bcc9-f3144d63db48" hidden="false" targetId="a31acb39-8ce9-d6d7-bcc9-f3144d63db48" primary="true" name="Stash"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="5f07-20e8-34d1-e340" name="Wyrdstone" hidden="false" collective="false" import="true" type="upgrade">
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-            <cost name="Warband Rating" typeId="wb-rating" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Trading Post" hidden="false" id="e836-d819-149f-0c3f" collective="false">
-          <constraints>
-            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="47db-25d1-4272-5e8a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c32e-fc88-3ca9-8cc1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <entryLinks>
-            <entryLink import="true" name="Equipment" hidden="false" id="0b7f-0d1d-b7c1-fbca" collective="false" targetId="2247-1f56-bc59-0ead" type="selectionEntryGroup"/>
-          </entryLinks>
-          <costs>
-            <cost name=" gc" typeId="points" value="0"/>
-            <cost name=" Warband Rating" typeId="wb-rating" value="0"/>
-            <cost name=" Rarity" typeId="rarity" value="0"/>
-          </costs>
-          <modifiers>
-            <modifier type="set" value="Equipment" field="name"/>
-          </modifiers>
-        </selectionEntry>
-      </selectionEntries>
-      <entryLinks>
-        <entryLink import="true" name="Variable Gold Cost" hidden="false" id="c01c-6528-e9dd-1a80" collective="false" targetId="deca-5737-6234-23a1" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" value="Gold" field="name"/>
-          </modifiers>
-        </entryLink>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-        <cost name="Warband Rating" typeId="wb-rating" value="0"/>
-      </costs>
     </selectionEntry>
     <selectionEntry id="16763088-15c1-4f72-fdfe-153003be4a24" name="Thunderers" page="0" hidden="false" collective="false" import="true" type="unit">
       <profiles>
@@ -1199,9 +1155,9 @@
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Thunderers)" hidden="false" id="04e5-d6b6-d8d3-ec63" sortIndex="5" collapsible="true">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Thunderers)" hidden="false" id="04e5-d6b6-d8d3-ec63" sortIndex="5" collapsible="false">
           <selectionEntryGroups>
-            <selectionEntryGroup name="Armour" id="76fb-88f1-e932-ec90" hidden="false" sortIndex="3">
+            <selectionEntryGroup name="Armour" id="76fb-88f1-e932-ec90" hidden="false" sortIndex="3" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Helmet" hidden="false" id="93bf-33fb-5ac5-0b29" collective="false" targetId="d0e5-ca89-5f0d-f5d2" type="selectionEntry" sortIndex="4">
                   <constraints>
@@ -1217,7 +1173,7 @@
                 </entryLink>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Hand-to-hand Weapons" id="fe9f-606f-10fd-1d42" hidden="false" sortIndex="1">
+            <selectionEntryGroup name="Hand-to-hand Weapons" id="fe9f-606f-10fd-1d42" hidden="false" sortIndex="1" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Mace" hidden="false" id="61f6-1d89-a3f2-7698" collective="false" targetId="2cbb-013b-3ebf-0459" type="selectionEntry" sortIndex="3"/>
                 <entryLink import="true" name="Dagger" hidden="false" id="47df-ea72-5a3b-1211" collective="false" targetId="64e0-0bb6-542b-4beb" type="selectionEntry" sortIndex="2"/>
@@ -1237,7 +1193,7 @@
                 </modifier>
               </modifiers>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Missile Weapons" id="0751-e54d-937d-a321" hidden="false" sortIndex="2">
+            <selectionEntryGroup name="Missile Weapons" id="0751-e54d-937d-a321" hidden="false" sortIndex="2" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Crossbow" hidden="false" id="4e64-f944-ad0e-f1da" type="selectionEntry" targetId="38cc-bc0b-7f19-8039" sortIndex="2"/>
                 <entryLink import="true" name="Pistol" hidden="false" id="13a2-31d0-1a4a-6737" type="selectionEntry" targetId="67e9-a4f5-8f76-168c" sortIndex="1"/>
@@ -1449,9 +1405,9 @@
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Dwarf Warrior)" hidden="false" id="8a8e-d46a-5a21-240a" collapsible="true">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Dwarf Warrior)" hidden="false" id="8a8e-d46a-5a21-240a" collapsible="false">
           <selectionEntryGroups>
-            <selectionEntryGroup name="Armour" id="d9cd-1ecf-cab5-aaa6" hidden="false" sortIndex="3">
+            <selectionEntryGroup name="Armour" id="d9cd-1ecf-cab5-aaa6" hidden="false" sortIndex="3" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Helmet" hidden="false" id="62e5-9662-c8e2-441b" collective="false" targetId="d0e5-ca89-5f0d-f5d2" type="selectionEntry" sortIndex="5">
                   <constraints>
@@ -1464,7 +1420,7 @@
                 <entryLink import="true" name="Gromril Armour" hidden="false" id="8989-ce25-2045-6665" type="selectionEntry" targetId="4c6d-eb92-53a7-a6d3" sortIndex="3"/>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Hand-to-hand Weapons" id="af20-2147-e69c-7882" hidden="false" sortIndex="1">
+            <selectionEntryGroup name="Hand-to-hand Weapons" id="af20-2147-e69c-7882" hidden="false" sortIndex="1" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Mace" hidden="false" id="84fb-b6fc-218a-b534" collective="false" targetId="2cbb-013b-3ebf-0459" type="selectionEntry" sortIndex="3"/>
                 <entryLink import="true" name="Dagger" hidden="false" id="a60e-7303-90e8-4e33" collective="false" targetId="64e0-0bb6-542b-4beb" type="selectionEntry" sortIndex="2"/>
@@ -1488,7 +1444,7 @@
                 </modifier>
               </modifiers>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Missile Weapons" id="3553-b765-47f5-093d" hidden="false" sortIndex="2">
+            <selectionEntryGroup name="Missile Weapons" id="3553-b765-47f5-093d" hidden="false" sortIndex="2" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Pistol" hidden="false" id="066d-4269-d61b-aa1a" type="selectionEntry" targetId="67e9-a4f5-8f76-168c" sortIndex="2"/>
               </entryLinks>

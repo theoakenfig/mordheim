@@ -51,7 +51,6 @@
   <categoryEntries>
     <categoryEntry id="a0fce0bc-02e0-a064-7a39-5b97ff8a9c94" name="Heroes" hidden="false"/>
     <categoryEntry id="f9b08d8e-4922-78d5-78ad-2047bff52dc8" name="Henchmen" hidden="false"/>
-    <categoryEntry id="a31acb39-8ce9-d6d7-bcc9-f3144d63db48" name="Stash" hidden="false"/>
     <categoryEntry id="0aea-26b8-980b-28aa" name="Dramatis Personae" hidden="false"/>
     <categoryEntry id="71f7-5ee6-ab09-7fd9" name="Hired Swords" hidden="false"/>
     <categoryEntry name="Configuration" id="4852-c4cb-82b0-b7fa" hidden="false"/>
@@ -59,18 +58,17 @@
   <forceEntries>
     <forceEntry id="7451d7da-3cc0-0299-775b-2f48162a731d" name="Warband" hidden="false" sortIndex="1">
       <categoryLinks>
-        <categoryLink name="Configuration" hidden="false" id="5d45-3d8d-79db-5458" targetId="4852-c4cb-82b0-b7fa" type="categoryEntry"/>
+        <categoryLink name="Configuration" hidden="false" id="5d45-3d8d-79db-5458" targetId="4852-c4cb-82b0-b7fa">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d6a6-dd0b-8826-67d1-min"/>
+          </constraints>
+        </categoryLink>
         <categoryLink id="7451d7da-3cc0-0299-775b-2f48162a731d-a0fce0bc-02e0-a064-7a39-5b97ff8a9c94" name="Heroes" hidden="false" targetId="a0fce0bc-02e0-a064-7a39-5b97ff8a9c94" primary="false">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="minSelections" type="min"/>
           </constraints>
         </categoryLink>
         <categoryLink id="7451d7da-3cc0-0299-775b-2f48162a731d-f9b08d8e-4922-78d5-78ad-2047bff52dc8" name="Henchmen" hidden="false" targetId="f9b08d8e-4922-78d5-78ad-2047bff52dc8" primary="false"/>
-        <categoryLink id="7451d7da-3cc0-0299-775b-2f48162a731d-a31acb39-8ce9-d6d7-bcc9-f3144d63db48" name="Stash" hidden="false" targetId="a31acb39-8ce9-d6d7-bcc9-f3144d63db48" primary="false">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="true" id="maxSelections" type="max"/>
-          </constraints>
-        </categoryLink>
       </categoryLinks>
     </forceEntry>
     <forceEntry id="1f34-e353-569e-f6b9" name="Hired Swords and Dramatis Personae" hidden="false" sortIndex="2">
@@ -80,4 +78,20 @@
       </categoryLinks>
     </forceEntry>
   </forceEntries>
+  <comment>added config grades/stash, doesn&apos;t count stash as warrior. 
+trading post limited to warband access. seperated club/mace/hammer
+added henchmen grouping (currently no grom/ithil). 
+cleaned up export layout dramatically
+
+
+
+
+
+
+
+
+
+
+
+</comment>
 </gameSystem>

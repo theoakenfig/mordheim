@@ -183,9 +183,9 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Beastmen)" hidden="false" id="0961-cba6-f046-f49b" sortIndex="4" collapsible="true">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Beastmen)" hidden="false" id="0961-cba6-f046-f49b" sortIndex="4" collapsible="false">
           <selectionEntryGroups>
-            <selectionEntryGroup name="Armour" id="32dd-3c0f-80c2-5f56" hidden="false" sortIndex="3">
+            <selectionEntryGroup name="Armour" id="32dd-3c0f-80c2-5f56" hidden="false" sortIndex="3" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Helmet" hidden="false" id="d652-1a7c-17a4-a530" collective="false" targetId="d0e5-ca89-5f0d-f5d2" type="selectionEntry" sortIndex="5">
                   <constraints>
@@ -197,7 +197,7 @@
                 <entryLink import="true" name="Light Armour" hidden="false" id="d2b0-bb7a-5c83-4eda" type="selectionEntry" targetId="3d2a-426a-c350-2a03" sortIndex="1"/>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Hand-to-hand Weapons" id="1d18-0fcb-2cf4-50ef" hidden="false" sortIndex="1">
+            <selectionEntryGroup name="Hand-to-hand Weapons" id="1d18-0fcb-2cf4-50ef" hidden="false" sortIndex="1" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Mace" hidden="false" id="d839-2bcf-f548-89ca" collective="false" targetId="2cbb-013b-3ebf-0459" type="selectionEntry" sortIndex="3"/>
                 <entryLink import="true" name="Dagger" hidden="false" id="edc2-f1d1-f25c-ad06" collective="false" targetId="64e0-0bb6-542b-4beb" type="selectionEntry" sortIndex="2"/>
@@ -451,9 +451,9 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Beastmen)" hidden="false" id="7745-113b-bb13-3d56" sortIndex="4" collapsible="true">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Beastmen)" hidden="false" id="7745-113b-bb13-3d56" sortIndex="4" collapsible="false">
           <selectionEntryGroups>
-            <selectionEntryGroup name="Hand-to-hand Weapons" id="1bdd-1794-68dd-ff05" hidden="false" sortIndex="1">
+            <selectionEntryGroup name="Hand-to-hand Weapons" id="1bdd-1794-68dd-ff05" hidden="false" sortIndex="1" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Mace" hidden="false" id="4791-785c-616d-1462" collective="false" targetId="2cbb-013b-3ebf-0459" type="selectionEntry" sortIndex="3"/>
                 <entryLink import="true" name="Dagger" hidden="false" id="fa0d-2ff4-9644-2935" collective="false" targetId="64e0-0bb6-542b-4beb" type="selectionEntry" sortIndex="2"/>
@@ -703,9 +703,9 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Beastmen)" hidden="false" id="b3a5-9456-db7a-e6f9" sortIndex="3" collapsible="true">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Beastmen)" hidden="false" id="b3a5-9456-db7a-e6f9" sortIndex="3" collapsible="false">
           <selectionEntryGroups>
-            <selectionEntryGroup name="Armour" id="0472-8c4d-312f-ddf7" hidden="false" sortIndex="3">
+            <selectionEntryGroup name="Armour" id="0472-8c4d-312f-ddf7" hidden="false" sortIndex="3" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Helmet" hidden="false" id="191b-a24e-5e40-8cd6" collective="false" targetId="d0e5-ca89-5f0d-f5d2" type="selectionEntry" sortIndex="5">
                   <constraints>
@@ -717,7 +717,7 @@
                 <entryLink import="true" name="Light Armour" hidden="false" id="7d73-02c5-514a-3be4" type="selectionEntry" targetId="3d2a-426a-c350-2a03" sortIndex="1"/>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Hand-to-hand Weapons" id="d869-e9cd-96c8-f095" hidden="false" sortIndex="1">
+            <selectionEntryGroup name="Hand-to-hand Weapons" id="d869-e9cd-96c8-f095" hidden="false" sortIndex="1" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Mace" hidden="false" id="50bb-90d8-3667-ce25" collective="false" targetId="2cbb-013b-3ebf-0459" type="selectionEntry" sortIndex="3"/>
                 <entryLink import="true" name="Dagger" hidden="false" id="c98f-1e19-1bd0-bb9f" collective="false" targetId="64e0-0bb6-542b-4beb" type="selectionEntry" sortIndex="2"/>
@@ -930,9 +930,9 @@ This counts as an additional attack, which does not benefit from weapon bonuses 
         <categoryLink id="5fd4-34bc-cc30-873a" name="Heroes" hidden="false" targetId="a0fce0bc-02e0-a064-7a39-5b97ff8a9c94" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Beastmen)" hidden="false" id="ba55-4530-f25d-152e" sortIndex="3" collapsible="true">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Beastmen)" hidden="false" id="ba55-4530-f25d-152e" sortIndex="3" collapsible="false">
           <selectionEntryGroups>
-            <selectionEntryGroup name="Armour" id="c540-357a-63c6-c0ce" hidden="false" sortIndex="3">
+            <selectionEntryGroup name="Armour" id="c540-357a-63c6-c0ce" hidden="false" sortIndex="3" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Helmet" hidden="false" id="4ee7-5dd1-674b-2cdf" collective="false" targetId="d0e5-ca89-5f0d-f5d2" type="selectionEntry" sortIndex="5">
                   <constraints>
@@ -944,7 +944,7 @@ This counts as an additional attack, which does not benefit from weapon bonuses 
                 <entryLink import="true" name="Light Armour" hidden="false" id="94a6-166e-206b-7644" type="selectionEntry" targetId="3d2a-426a-c350-2a03" sortIndex="1"/>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Hand-to-hand Weapons" id="4a70-36b5-078f-09ce" hidden="false" sortIndex="1">
+            <selectionEntryGroup name="Hand-to-hand Weapons" id="4a70-36b5-078f-09ce" hidden="false" sortIndex="1" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Mace" hidden="false" id="9324-f064-1327-0e51" collective="false" targetId="2cbb-013b-3ebf-0459" type="selectionEntry" sortIndex="3"/>
                 <entryLink import="true" name="Dagger" hidden="false" id="cdfd-66bc-b425-3220" collective="false" targetId="64e0-0bb6-542b-4beb" type="selectionEntry" sortIndex="2"/>
@@ -1207,9 +1207,9 @@ If an Ungor rolls ‘That lad’s got talent’ it must be re-rolled.</descripti
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="36b6-7afb-6b91-3f61"/>
           </constraints>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Ungor)" hidden="false" id="d551-1548-7a35-d24f" sortIndex="4" collapsible="true">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Ungor)" hidden="false" id="d551-1548-7a35-d24f" sortIndex="4" collapsible="false">
           <selectionEntryGroups>
-            <selectionEntryGroup name="Hand-to-hand Weapons" id="40c0-e9a2-eeb8-fe9a" hidden="false" sortIndex="1">
+            <selectionEntryGroup name="Hand-to-hand Weapons" id="40c0-e9a2-eeb8-fe9a" hidden="false" sortIndex="1" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Mace" hidden="false" id="377b-da8a-6bec-d4f1" collective="false" targetId="2cbb-013b-3ebf-0459" type="selectionEntry" sortIndex="3"/>
                 <entryLink import="true" name="Dagger" hidden="false" id="1635-8e2b-407b-52f1" collective="false" targetId="64e0-0bb6-542b-4beb" type="selectionEntry" sortIndex="2"/>
@@ -1229,7 +1229,7 @@ If an Ungor rolls ‘That lad’s got talent’ it must be re-rolled.</descripti
                 </modifier>
               </modifiers>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Armour" id="546c-d9a8-85db-13bc" hidden="false">
+            <selectionEntryGroup name="Armour" id="546c-d9a8-85db-13bc" hidden="false" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Shield" hidden="false" id="f187-af38-b6ac-beeb" type="selectionEntry" targetId="74fb-cc90-1361-df26" sortIndex="3"/>
               </entryLinks>
@@ -1269,14 +1269,8 @@ If an Ungor rolls ‘That lad’s got talent’ it must be re-rolled.</descripti
         <cost name="pts" typeId="points" value="25"/>
         <cost name="Warband Rating" typeId="wb-rating" value="5"/>
       </costs>
-      <constraints>
-        <constraint type="max" value="10" field="selections" scope="roster" shared="false" id="fe4d-b148-7095-426e" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-      </constraints>
     </selectionEntry>
     <selectionEntry id="f882-12d0-ce5c-f7c1" name="Gor" hidden="false" collective="false" import="true" type="unit">
-      <constraints>
-        <constraint field="selections" scope="roster" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="dba6-c9f9-d647-200e" type="max"/>
-      </constraints>
       <profiles>
         <profile id="4ce3-0df4-7fde-d4c0" name="Gor" hidden="false" typeId="e1beaa44-e54d-dd6b-d1f2-446b333c9bb9" typeName="Model">
           <modifiers>
@@ -1395,9 +1389,9 @@ If an Ungor rolls ‘That lad’s got talent’ it must be re-rolled.</descripti
         <categoryLink id="cd55-9edf-548c-40d7" name="Henchmen" hidden="false" targetId="f9b08d8e-4922-78d5-78ad-2047bff52dc8" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Beastmen)" hidden="false" id="3c04-a52a-592f-541d" sortIndex="5" collapsible="true">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Beastmen)" hidden="false" id="3c04-a52a-592f-541d" sortIndex="5" collapsible="false">
           <selectionEntryGroups>
-            <selectionEntryGroup name="Armour" id="e938-32cd-5d05-3500" hidden="false" sortIndex="3">
+            <selectionEntryGroup name="Armour" id="e938-32cd-5d05-3500" hidden="false" sortIndex="3" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Helmet" hidden="false" id="e04c-7287-79ef-fbb5" collective="false" targetId="d0e5-ca89-5f0d-f5d2" type="selectionEntry" sortIndex="5">
                   <constraints>
@@ -1409,7 +1403,7 @@ If an Ungor rolls ‘That lad’s got talent’ it must be re-rolled.</descripti
                 <entryLink import="true" name="Light Armour" hidden="false" id="c1f1-3206-1916-f751" type="selectionEntry" targetId="3d2a-426a-c350-2a03" sortIndex="1"/>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Hand-to-hand Weapons" id="d1a8-ed05-7f14-f75a" hidden="false" sortIndex="1">
+            <selectionEntryGroup name="Hand-to-hand Weapons" id="d1a8-ed05-7f14-f75a" hidden="false" sortIndex="1" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Mace" hidden="false" id="dc2c-407c-2ce4-e700" collective="false" targetId="2cbb-013b-3ebf-0459" type="selectionEntry" sortIndex="3"/>
                 <entryLink import="true" name="Dagger" hidden="false" id="3dab-a965-2144-ddfa" collective="false" targetId="64e0-0bb6-542b-4beb" type="selectionEntry" sortIndex="2"/>
@@ -1735,9 +1729,9 @@ If an Ungor rolls ‘That lad’s got talent’ it must be re-rolled.</descripti
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Beastmen)" hidden="false" id="0cd1-60a6-819d-20a3" sortIndex="3" collapsible="true">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Beastmen)" hidden="false" id="0cd1-60a6-819d-20a3" sortIndex="3" collapsible="false">
           <selectionEntryGroups>
-            <selectionEntryGroup name="Armour" id="9488-b84a-9703-d645" hidden="false" sortIndex="3">
+            <selectionEntryGroup name="Armour" id="9488-b84a-9703-d645" hidden="false" sortIndex="3" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Helmet" hidden="false" id="e1ed-c14a-c20d-eb04" collective="false" targetId="d0e5-ca89-5f0d-f5d2" type="selectionEntry" sortIndex="5">
                   <constraints>
@@ -1749,7 +1743,7 @@ If an Ungor rolls ‘That lad’s got talent’ it must be re-rolled.</descripti
                 <entryLink import="true" name="Light Armour" hidden="false" id="ab47-1b2d-7a9c-9fd5" type="selectionEntry" targetId="3d2a-426a-c350-2a03" sortIndex="1"/>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Hand-to-hand Weapons" id="4d6e-c2c6-18fa-a2be" hidden="false" sortIndex="1">
+            <selectionEntryGroup name="Hand-to-hand Weapons" id="4d6e-c2c6-18fa-a2be" hidden="false" sortIndex="1" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Mace" hidden="false" id="6e4f-3ecb-ca83-8966" collective="false" targetId="2cbb-013b-3ebf-0459" type="selectionEntry" sortIndex="3"/>
                 <entryLink import="true" name="Dagger" hidden="false" id="458e-56dd-477f-5dd6" collective="false" targetId="64e0-0bb6-542b-4beb" type="selectionEntry" sortIndex="2"/>
@@ -1784,24 +1778,6 @@ If an Ungor rolls ‘That lad’s got talent’ it must be re-rolled.</descripti
       <costs>
         <cost name="pts" typeId="points" value="200"/>
         <cost name="Warband Rating" typeId="wb-rating" value="20"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="56a8-4dff-0049-0b65" name="Stash" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="8885-28db-655e-ed20" type="min"/>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3a8b-3514-841c-fcc8" type="max"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="d8ea-09b6-df01-6a26" name="Stash" hidden="false" targetId="a31acb39-8ce9-d6d7-bcc9-f3144d63db48" primary="true"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="16b7-704b-249a-4199" name="Variable Gold Cost" hidden="false" collective="false" import="true" targetId="deca-5737-6234-23a1" type="selectionEntry"/>
-        <entryLink id="e743-b303-078d-580e" name="Wyrdstone" hidden="false" collective="false" import="true" targetId="60f8-e6e7-c2ea-0dad" type="selectionEntry"/>
-        <entryLink id="04c3-6648-7241-e5c1" name="Equipment" hidden="false" collective="false" import="true" targetId="2247-1f56-bc59-0ead" type="selectionEntryGroup"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-        <cost name="Warband Rating" typeId="wb-rating" value="0"/>
       </costs>
     </selectionEntry>
   </selectionEntries>

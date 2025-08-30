@@ -137,9 +137,9 @@
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Ostlander)" hidden="false" id="9943-7983-8cd4-b1b1" sortIndex="4" collapsible="true">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Ostlander)" hidden="false" id="9943-7983-8cd4-b1b1" sortIndex="4" collapsible="false">
           <selectionEntryGroups>
-            <selectionEntryGroup name="Armour" id="54fc-d26e-058f-4c0a" hidden="false" sortIndex="3">
+            <selectionEntryGroup name="Armour" id="54fc-d26e-058f-4c0a" hidden="false" sortIndex="3" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Helmet" hidden="false" id="7453-4c96-3dee-038a" collective="false" targetId="d0e5-ca89-5f0d-f5d2" type="selectionEntry" sortIndex="4">
                   <constraints>
@@ -151,7 +151,7 @@
                 <entryLink import="true" name="Heavy Armour" hidden="false" id="032f-e65a-f884-c2b0" type="selectionEntry" targetId="4e34-bbc5-c7ef-6bd6" sortIndex="2"/>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Hand-to-hand Weapons" id="0c5c-1608-e021-5431" hidden="false" sortIndex="1">
+            <selectionEntryGroup name="Hand-to-hand Weapons" id="0c5c-1608-e021-5431" hidden="false" sortIndex="1" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Mace" hidden="false" id="94ad-d53f-0749-3d87" collective="false" targetId="2cbb-013b-3ebf-0459" type="selectionEntry" sortIndex="3"/>
                 <entryLink import="true" name="Dagger" hidden="false" id="9b31-aac6-36eb-ac38" collective="false" targetId="64e0-0bb6-542b-4beb" type="selectionEntry" sortIndex="2"/>
@@ -173,7 +173,7 @@
                 </modifier>
               </modifiers>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Missile Weapons" id="27d2-8808-a2e3-0e09" hidden="false" sortIndex="2">
+            <selectionEntryGroup name="Missile Weapons" id="27d2-8808-a2e3-0e09" hidden="false" sortIndex="2" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Bow" hidden="false" id="60db-d023-b5cf-569f" collective="false" targetId="311a-bf3f-67ff-46e7" type="selectionEntry" sortIndex="1">
                   <constraints>
@@ -389,9 +389,9 @@
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Ostlander)" hidden="false" id="ed0f-12ba-a9ac-7d6b" sortIndex="3" collapsible="true">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Ostlander)" hidden="false" id="ed0f-12ba-a9ac-7d6b" sortIndex="3" collapsible="false">
           <selectionEntryGroups>
-            <selectionEntryGroup name="Armour" id="1664-f654-d5a8-f67d" hidden="false" sortIndex="3">
+            <selectionEntryGroup name="Armour" id="1664-f654-d5a8-f67d" hidden="false" sortIndex="3" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Helmet" hidden="false" id="9114-6c65-1d9c-fdf2" collective="false" targetId="d0e5-ca89-5f0d-f5d2" type="selectionEntry" sortIndex="4">
                   <constraints>
@@ -403,7 +403,7 @@
                 <entryLink import="true" name="Heavy Armour" hidden="false" id="6577-d159-cdcd-3c98" type="selectionEntry" targetId="4e34-bbc5-c7ef-6bd6" sortIndex="2"/>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Hand-to-hand Weapons" id="9b7e-032b-4312-b6d9" hidden="false" sortIndex="1">
+            <selectionEntryGroup name="Hand-to-hand Weapons" id="9b7e-032b-4312-b6d9" hidden="false" sortIndex="1" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Mace" hidden="false" id="b3e1-0e54-7d02-1706" collective="false" targetId="2cbb-013b-3ebf-0459" type="selectionEntry" sortIndex="3"/>
                 <entryLink import="true" name="Dagger" hidden="false" id="c326-a3d3-e671-046f" collective="false" targetId="64e0-0bb6-542b-4beb" type="selectionEntry" sortIndex="2"/>
@@ -425,7 +425,7 @@
                 </modifier>
               </modifiers>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Missile Weapons" id="b7bb-f8ef-925a-5b15" hidden="false" sortIndex="2">
+            <selectionEntryGroup name="Missile Weapons" id="b7bb-f8ef-925a-5b15" hidden="false" sortIndex="2" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Bow" hidden="false" id="bcf8-8c8e-658e-2485" collective="false" targetId="311a-bf3f-67ff-46e7" type="selectionEntry" sortIndex="1">
                   <constraints>
@@ -647,9 +647,9 @@
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Ostlander)" hidden="false" id="945f-9956-9a2c-8015" sortIndex="4" collapsible="true">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Ostlander)" hidden="false" id="945f-9956-9a2c-8015" sortIndex="4" collapsible="false">
           <selectionEntryGroups>
-            <selectionEntryGroup name="Armour" id="9cbc-322f-40a6-aa74" hidden="false" sortIndex="3">
+            <selectionEntryGroup name="Armour" id="9cbc-322f-40a6-aa74" hidden="false" sortIndex="3" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Helmet" hidden="false" id="f614-66db-891a-5525" collective="false" targetId="d0e5-ca89-5f0d-f5d2" type="selectionEntry" sortIndex="4">
                   <constraints>
@@ -661,7 +661,7 @@
                 <entryLink import="true" name="Heavy Armour" hidden="false" id="77c3-fe01-163a-dd95" type="selectionEntry" targetId="4e34-bbc5-c7ef-6bd6" sortIndex="2"/>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Hand-to-hand Weapons" id="61df-4f01-e77e-86d7" hidden="false" sortIndex="1">
+            <selectionEntryGroup name="Hand-to-hand Weapons" id="61df-4f01-e77e-86d7" hidden="false" sortIndex="1" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Mace" hidden="false" id="f778-a8e7-ebf6-7af9" collective="false" targetId="2cbb-013b-3ebf-0459" type="selectionEntry" sortIndex="3"/>
                 <entryLink import="true" name="Dagger" hidden="false" id="7ef7-54b5-49bd-3093" collective="false" targetId="64e0-0bb6-542b-4beb" type="selectionEntry" sortIndex="2"/>
@@ -683,7 +683,7 @@
                 </modifier>
               </modifiers>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Missile Weapons" id="b426-4c35-8d19-db62" hidden="false" sortIndex="2">
+            <selectionEntryGroup name="Missile Weapons" id="b426-4c35-8d19-db62" hidden="false" sortIndex="2" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Bow" hidden="false" id="29a1-9562-bfa5-16a5" collective="false" targetId="311a-bf3f-67ff-46e7" type="selectionEntry" sortIndex="1">
                   <constraints>
@@ -932,9 +932,9 @@
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Ostlander)" hidden="false" id="a743-68fb-6a72-236e" sortIndex="5" collapsible="true">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Ostlander)" hidden="false" id="a743-68fb-6a72-236e" sortIndex="5" collapsible="false">
           <selectionEntryGroups>
-            <selectionEntryGroup name="Armour" id="045f-78ab-45f0-bd6e" hidden="false" sortIndex="3">
+            <selectionEntryGroup name="Armour" id="045f-78ab-45f0-bd6e" hidden="false" sortIndex="3" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Helmet" hidden="false" id="5a05-abc7-ccf0-64e5" collective="false" targetId="d0e5-ca89-5f0d-f5d2" type="selectionEntry" sortIndex="4">
                   <constraints>
@@ -946,7 +946,7 @@
                 <entryLink import="true" name="Heavy Armour" hidden="false" id="9e98-bb90-f41f-777e" type="selectionEntry" targetId="4e34-bbc5-c7ef-6bd6" sortIndex="2"/>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Hand-to-hand Weapons" id="c92c-49fc-dd10-93d6" hidden="false" sortIndex="1">
+            <selectionEntryGroup name="Hand-to-hand Weapons" id="c92c-49fc-dd10-93d6" hidden="false" sortIndex="1" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Mace" hidden="false" id="6b72-7c3b-30e3-53a7" collective="false" targetId="2cbb-013b-3ebf-0459" type="selectionEntry" sortIndex="3"/>
                 <entryLink import="true" name="Dagger" hidden="false" id="4f56-ebc3-fdc3-34cb" collective="false" targetId="64e0-0bb6-542b-4beb" type="selectionEntry" sortIndex="2"/>
@@ -968,7 +968,7 @@
                 </modifier>
               </modifiers>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Missile Weapons" id="bf9e-612e-66a3-7273" hidden="false" sortIndex="2">
+            <selectionEntryGroup name="Missile Weapons" id="bf9e-612e-66a3-7273" hidden="false" sortIndex="2" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Bow" hidden="false" id="73d1-32e4-af7e-5546" collective="false" targetId="311a-bf3f-67ff-46e7" type="selectionEntry" sortIndex="1">
                   <constraints>
@@ -1184,9 +1184,9 @@
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Jaeger)" hidden="false" id="9054-b8df-2dfc-1d3b" sortIndex="5" collapsible="true">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Jaeger)" hidden="false" id="9054-b8df-2dfc-1d3b" sortIndex="5" collapsible="false">
           <selectionEntryGroups>
-            <selectionEntryGroup name="Armour" id="ce7a-52df-6e12-7b2e" hidden="false" sortIndex="3">
+            <selectionEntryGroup name="Armour" id="ce7a-52df-6e12-7b2e" hidden="false" sortIndex="3" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Helmet" hidden="false" id="1834-7a3f-0ce8-0030" collective="false" targetId="d0e5-ca89-5f0d-f5d2" type="selectionEntry" sortIndex="5">
                   <constraints>
@@ -1197,7 +1197,7 @@
                 <entryLink import="true" name="Light Armour" hidden="false" id="fecd-4a2a-68d0-a6a3" type="selectionEntry" targetId="3d2a-426a-c350-2a03" sortIndex="1"/>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Hand-to-hand Weapons" id="c5db-9cbf-e0b6-3701" hidden="false" sortIndex="1">
+            <selectionEntryGroup name="Hand-to-hand Weapons" id="c5db-9cbf-e0b6-3701" hidden="false" sortIndex="1" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Dagger" hidden="false" id="1f77-7fc5-df8c-a94f" collective="false" targetId="64e0-0bb6-542b-4beb" type="selectionEntry" sortIndex="2"/>
                 <entryLink import="true" name="Free Dagger" hidden="false" id="6f1a-88e5-c9de-c079" collective="false" targetId="0d0b-ed37-d8b0-4cbf" type="selectionEntry" sortIndex="1"/>
@@ -1216,7 +1216,7 @@
                 </modifier>
               </modifiers>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Missile Weapons" id="2636-7475-90ab-108c" hidden="false" sortIndex="2">
+            <selectionEntryGroup name="Missile Weapons" id="2636-7475-90ab-108c" hidden="false" sortIndex="2" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Bow" hidden="false" id="00a4-7c83-9aa4-550d" collective="false" targetId="311a-bf3f-67ff-46e7" type="selectionEntry" sortIndex="4">
                   <constraints>
@@ -1447,14 +1447,14 @@ As such, they automatically pass all Leadership based tests they are required to
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Ruffian)" hidden="false" id="d55c-6bb1-af46-0b86" sortIndex="5">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Ruffian)" hidden="false" id="d55c-6bb1-af46-0b86" sortIndex="5" collapsible="false">
           <selectionEntryGroups>
-            <selectionEntryGroup name="Armour" id="7734-d3e6-b70e-f62a" hidden="false">
+            <selectionEntryGroup name="Armour" id="7734-d3e6-b70e-f62a" hidden="false" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Light Armour" hidden="false" id="09c1-8df8-db08-8b08" type="selectionEntry" targetId="3d2a-426a-c350-2a03" sortIndex="1"/>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Hand-to-hand Weapons" id="7285-5e88-8f60-453e" hidden="false" sortIndex="1">
+            <selectionEntryGroup name="Hand-to-hand Weapons" id="7285-5e88-8f60-453e" hidden="false" sortIndex="1" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Mace" hidden="false" id="c7db-3223-4fc9-3269" collective="false" targetId="2cbb-013b-3ebf-0459" type="selectionEntry" sortIndex="3"/>
                 <entryLink import="true" name="Dagger" hidden="false" id="527a-b9a7-cd84-b32c" collective="false" targetId="64e0-0bb6-542b-4beb" type="selectionEntry" sortIndex="2"/>
@@ -1660,14 +1660,14 @@ Ogres only gain advances at half the rate of everyone else (ie, they must accrue
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Ogre)" hidden="false" id="b8d9-78b3-932f-be2a" sortIndex="4" collapsible="true">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Ogre)" hidden="false" id="b8d9-78b3-932f-be2a" sortIndex="4" collapsible="false">
           <selectionEntryGroups>
-            <selectionEntryGroup name="Armour" id="0d06-ef94-dabf-4e65" hidden="false">
+            <selectionEntryGroup name="Armour" id="0d06-ef94-dabf-4e65" hidden="false" collapsible="true" sortIndex="2">
               <entryLinks>
                 <entryLink import="true" name="Light Armour" hidden="false" id="9258-20c9-c5e3-c9d4" type="selectionEntry" targetId="3d2a-426a-c350-2a03" sortIndex="1"/>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Hand-to-hand Weapons" id="7c59-0bbe-10b5-057f" hidden="false">
+            <selectionEntryGroup name="Hand-to-hand Weapons" id="7c59-0bbe-10b5-057f" hidden="false" collapsible="true" sortIndex="1">
               <entryLinks>
                 <entryLink import="true" name="Sword" hidden="false" id="edbc-1915-8659-ce68" collective="false" targetId="34fd-d6a3-50ee-ee06" type="selectionEntry" sortIndex="6"/>
                 <entryLink import="true" name="Club" hidden="false" id="42cb-0643-21c6-2474" collective="false" targetId="b43f-0d15-1f20-7fda" type="selectionEntry" sortIndex="4"/>

@@ -135,9 +135,9 @@ Until the item is replaced, the Captain suffers a -1 penalty to all tests and ro
         <categoryLink id="a753-4b12-c5b0-59f3" name="Heroes" hidden="false" targetId="a0fce0bc-02e0-a064-7a39-5b97ff8a9c94" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Kislev Warrior)" hidden="false" id="179c-9eeb-69fc-ebe2" sortIndex="4" collapsible="true">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Kislev Warrior)" hidden="false" id="179c-9eeb-69fc-ebe2" sortIndex="4" collapsible="false">
           <selectionEntryGroups>
-            <selectionEntryGroup name="Armour" id="bcfb-5843-e0f4-6624" hidden="false" sortIndex="3">
+            <selectionEntryGroup name="Armour" id="bcfb-5843-e0f4-6624" hidden="false" sortIndex="3" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Helmet" hidden="false" id="5cef-e900-e9d0-1650" collective="false" targetId="d0e5-ca89-5f0d-f5d2" type="selectionEntry" sortIndex="5">
                   <constraints>
@@ -150,7 +150,7 @@ Until the item is replaced, the Captain suffers a -1 penalty to all tests and ro
                 <entryLink import="true" name="Buckler" hidden="false" id="f2ff-b5c5-7319-a540" type="selectionEntry" targetId="0871-44c2-f0f0-c27a" sortIndex="4"/>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Hand-to-hand Weapons" id="3062-0def-53f8-2378" hidden="false" sortIndex="1">
+            <selectionEntryGroup name="Hand-to-hand Weapons" id="3062-0def-53f8-2378" hidden="false" sortIndex="1" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Mace" hidden="false" id="14f3-19e8-a550-67b4" collective="false" targetId="2cbb-013b-3ebf-0459" type="selectionEntry" sortIndex="3"/>
                 <entryLink import="true" name="Dagger" hidden="false" id="a83f-0e8c-00f2-145d" collective="false" targetId="64e0-0bb6-542b-4beb" type="selectionEntry" sortIndex="2"/>
@@ -174,7 +174,7 @@ Until the item is replaced, the Captain suffers a -1 penalty to all tests and ro
                 </modifier>
               </modifiers>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Missile Weapons" id="6cc9-b524-9fdc-8cab" hidden="false" sortIndex="2">
+            <selectionEntryGroup name="Missile Weapons" id="6cc9-b524-9fdc-8cab" hidden="false" sortIndex="2" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Bow" hidden="false" id="dd2e-3ea4-2931-ceaa" collective="false" targetId="311a-bf3f-67ff-46e7" type="selectionEntry" sortIndex="3">
                   <constraints>
@@ -403,9 +403,9 @@ This bear has been trained to follow the Tamer&apos;s commands, and so will auto
         <categoryLink id="f2bc-49a9-1b8e-39a0" name="Heroes" hidden="false" targetId="a0fce0bc-02e0-a064-7a39-5b97ff8a9c94" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Kislev Warrior)" hidden="false" id="075b-88c5-bb45-b5fc" sortIndex="3" collapsible="true">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Kislev Warrior)" hidden="false" id="075b-88c5-bb45-b5fc" sortIndex="3" collapsible="false">
           <selectionEntryGroups>
-            <selectionEntryGroup name="Armour" id="ca58-8510-b4cd-bdec" hidden="false" sortIndex="3">
+            <selectionEntryGroup name="Armour" id="ca58-8510-b4cd-bdec" hidden="false" sortIndex="3" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Helmet" hidden="false" id="3bc0-224e-254f-1620" collective="false" targetId="d0e5-ca89-5f0d-f5d2" type="selectionEntry" sortIndex="5">
                   <constraints>
@@ -418,7 +418,7 @@ This bear has been trained to follow the Tamer&apos;s commands, and so will auto
                 <entryLink import="true" name="Buckler" hidden="false" id="2769-a7c7-3998-f7f6" type="selectionEntry" targetId="0871-44c2-f0f0-c27a" sortIndex="4"/>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Hand-to-hand Weapons" id="7445-d0b4-3645-0eaa" hidden="false" sortIndex="1">
+            <selectionEntryGroup name="Hand-to-hand Weapons" id="7445-d0b4-3645-0eaa" hidden="false" sortIndex="1" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Mace" hidden="false" id="ca46-a082-0405-32ae" collective="false" targetId="2cbb-013b-3ebf-0459" type="selectionEntry" sortIndex="3"/>
                 <entryLink import="true" name="Dagger" hidden="false" id="3931-74d0-1254-2197" collective="false" targetId="64e0-0bb6-542b-4beb" type="selectionEntry" sortIndex="2"/>
@@ -442,7 +442,7 @@ This bear has been trained to follow the Tamer&apos;s commands, and so will auto
                 </modifier>
               </modifiers>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Missile Weapons" id="93a6-700e-b60b-1026" hidden="false" sortIndex="2">
+            <selectionEntryGroup name="Missile Weapons" id="93a6-700e-b60b-1026" hidden="false" sortIndex="2" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Bow" hidden="false" id="563e-8347-6813-5455" collective="false" targetId="311a-bf3f-67ff-46e7" type="selectionEntry" sortIndex="3">
                   <constraints>
@@ -664,9 +664,9 @@ This bear has been trained to follow the Tamer&apos;s commands, and so will auto
         <categoryLink id="c406-cf27-dbd4-5e83" name="Heroes" hidden="false" targetId="a0fce0bc-02e0-a064-7a39-5b97ff8a9c94" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Kislev Warrior)" hidden="false" id="c664-5319-1ccf-06ad" sortIndex="3" collapsible="true">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Kislev Warrior)" hidden="false" id="c664-5319-1ccf-06ad" sortIndex="3" collapsible="false">
           <selectionEntryGroups>
-            <selectionEntryGroup name="Armour" id="6c3d-2d06-3de7-2511" hidden="false" sortIndex="3">
+            <selectionEntryGroup name="Armour" id="6c3d-2d06-3de7-2511" hidden="false" sortIndex="3" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Helmet" hidden="false" id="8f7b-9d16-9e35-1fbb" collective="false" targetId="d0e5-ca89-5f0d-f5d2" type="selectionEntry" sortIndex="5">
                   <constraints>
@@ -679,7 +679,7 @@ This bear has been trained to follow the Tamer&apos;s commands, and so will auto
                 <entryLink import="true" name="Buckler" hidden="false" id="e3ab-3185-5eb5-a5f9" type="selectionEntry" targetId="0871-44c2-f0f0-c27a" sortIndex="4"/>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Hand-to-hand Weapons" id="fe55-c20a-aea5-ec99" hidden="false" sortIndex="1">
+            <selectionEntryGroup name="Hand-to-hand Weapons" id="fe55-c20a-aea5-ec99" hidden="false" sortIndex="1" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Mace" hidden="false" id="a998-64e0-a7f8-e6f0" collective="false" targetId="2cbb-013b-3ebf-0459" type="selectionEntry" sortIndex="3"/>
                 <entryLink import="true" name="Dagger" hidden="false" id="6063-5856-c0d1-816d" collective="false" targetId="64e0-0bb6-542b-4beb" type="selectionEntry" sortIndex="2"/>
@@ -703,7 +703,7 @@ This bear has been trained to follow the Tamer&apos;s commands, and so will auto
                 </modifier>
               </modifiers>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Missile Weapons" id="df4e-72ad-c7be-22aa" hidden="false" sortIndex="2">
+            <selectionEntryGroup name="Missile Weapons" id="df4e-72ad-c7be-22aa" hidden="false" sortIndex="2" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Bow" hidden="false" id="e262-d854-7fd6-95dd" collective="false" targetId="311a-bf3f-67ff-46e7" type="selectionEntry" sortIndex="3">
                   <constraints>
@@ -925,9 +925,9 @@ This bear has been trained to follow the Tamer&apos;s commands, and so will auto
         <categoryLink id="9300-46f1-a7c5-e227" name="Heroes" hidden="false" targetId="a0fce0bc-02e0-a064-7a39-5b97ff8a9c94" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Kislev Warrior)" hidden="false" id="ef4f-9b52-6058-0a85" sortIndex="3" collapsible="true">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Kislev Warrior)" hidden="false" id="ef4f-9b52-6058-0a85" sortIndex="3" collapsible="false">
           <selectionEntryGroups>
-            <selectionEntryGroup name="Armour" id="89cb-fe4b-62c2-05ac" hidden="false" sortIndex="3">
+            <selectionEntryGroup name="Armour" id="89cb-fe4b-62c2-05ac" hidden="false" sortIndex="3" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Helmet" hidden="false" id="331f-6de7-c564-11ba" collective="false" targetId="d0e5-ca89-5f0d-f5d2" type="selectionEntry" sortIndex="5">
                   <constraints>
@@ -940,7 +940,7 @@ This bear has been trained to follow the Tamer&apos;s commands, and so will auto
                 <entryLink import="true" name="Buckler" hidden="false" id="049c-7ee5-4d70-020b" type="selectionEntry" targetId="0871-44c2-f0f0-c27a" sortIndex="4"/>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Hand-to-hand Weapons" id="555f-1ad9-fa63-de4f" hidden="false" sortIndex="1">
+            <selectionEntryGroup name="Hand-to-hand Weapons" id="555f-1ad9-fa63-de4f" hidden="false" sortIndex="1" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Mace" hidden="false" id="895c-bd24-7ada-e9a0" collective="false" targetId="2cbb-013b-3ebf-0459" type="selectionEntry" sortIndex="3"/>
                 <entryLink import="true" name="Dagger" hidden="false" id="ce0d-7563-3fea-fb47" collective="false" targetId="64e0-0bb6-542b-4beb" type="selectionEntry" sortIndex="2"/>
@@ -964,7 +964,7 @@ This bear has been trained to follow the Tamer&apos;s commands, and so will auto
                 </modifier>
               </modifiers>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Missile Weapons" id="b310-b6fc-1184-371b" hidden="false" sortIndex="2">
+            <selectionEntryGroup name="Missile Weapons" id="b310-b6fc-1184-371b" hidden="false" sortIndex="2" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Bow" hidden="false" id="71b6-03ae-b3d7-4faf" collective="false" targetId="311a-bf3f-67ff-46e7" type="selectionEntry" sortIndex="3">
                   <constraints>
@@ -1208,9 +1208,9 @@ This bear has been trained to follow the Tamer&apos;s commands, and so will auto
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Kislev Warrior)" hidden="false" id="4a1c-8ea4-9c65-dae9" sortIndex="5" collapsible="true">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Kislev Warrior)" hidden="false" id="4a1c-8ea4-9c65-dae9" sortIndex="5" collapsible="false">
           <selectionEntryGroups>
-            <selectionEntryGroup name="Armour" id="ba53-4f64-9e12-8d20" hidden="false" sortIndex="3">
+            <selectionEntryGroup name="Armour" id="ba53-4f64-9e12-8d20" hidden="false" sortIndex="3" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Helmet" hidden="false" id="de1b-d2a2-dc8a-3ee0" collective="false" targetId="d0e5-ca89-5f0d-f5d2" type="selectionEntry" sortIndex="5">
                   <constraints>
@@ -1223,7 +1223,7 @@ This bear has been trained to follow the Tamer&apos;s commands, and so will auto
                 <entryLink import="true" name="Buckler" hidden="false" id="cc9a-eae1-4ebe-ec8d" type="selectionEntry" targetId="0871-44c2-f0f0-c27a" sortIndex="4"/>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Hand-to-hand Weapons" id="4c89-3c06-8ffc-cb8d" hidden="false" sortIndex="1">
+            <selectionEntryGroup name="Hand-to-hand Weapons" id="4c89-3c06-8ffc-cb8d" hidden="false" sortIndex="1" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Mace" hidden="false" id="9fd7-dff3-fc85-347f" collective="false" targetId="2cbb-013b-3ebf-0459" type="selectionEntry" sortIndex="3"/>
                 <entryLink import="true" name="Dagger" hidden="false" id="fe11-60b0-52b4-b86c" collective="false" targetId="64e0-0bb6-542b-4beb" type="selectionEntry" sortIndex="2"/>
@@ -1247,7 +1247,7 @@ This bear has been trained to follow the Tamer&apos;s commands, and so will auto
                 </modifier>
               </modifiers>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Missile Weapons" id="bbd5-220e-85b0-1af5" hidden="false" sortIndex="2">
+            <selectionEntryGroup name="Missile Weapons" id="bbd5-220e-85b0-1af5" hidden="false" sortIndex="2" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Bow" hidden="false" id="e2d8-fd1e-7ce3-92b6" collective="false" targetId="311a-bf3f-67ff-46e7" type="selectionEntry" sortIndex="3">
                   <constraints>
@@ -1497,9 +1497,9 @@ Cossacks are subject to Hatred against all forces of Chaos (eg. members of any w
             <cost name=" Rarity" typeId="rarity" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Kislev Warrior)" hidden="false" id="db44-f118-2024-3dd2" sortIndex="5" collapsible="true">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Kislev Warrior)" hidden="false" id="db44-f118-2024-3dd2" sortIndex="5" collapsible="false">
           <selectionEntryGroups>
-            <selectionEntryGroup name="Armour" id="547b-4ec6-e78a-b8f3" hidden="false" sortIndex="3">
+            <selectionEntryGroup name="Armour" id="547b-4ec6-e78a-b8f3" hidden="false" sortIndex="3" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Helmet" hidden="false" id="719b-804b-7500-d860" collective="false" targetId="d0e5-ca89-5f0d-f5d2" type="selectionEntry" sortIndex="5">
                   <constraints>
@@ -1512,7 +1512,7 @@ Cossacks are subject to Hatred against all forces of Chaos (eg. members of any w
                 <entryLink import="true" name="Buckler" hidden="false" id="6830-f1a0-0989-de96" type="selectionEntry" targetId="0871-44c2-f0f0-c27a" sortIndex="4"/>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Hand-to-hand Weapons" id="a13d-fcd8-d8fc-b50c" hidden="false" sortIndex="1">
+            <selectionEntryGroup name="Hand-to-hand Weapons" id="a13d-fcd8-d8fc-b50c" hidden="false" sortIndex="1" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Mace" hidden="false" id="678b-71ab-c7de-1f0d" collective="false" targetId="2cbb-013b-3ebf-0459" type="selectionEntry" sortIndex="3"/>
                 <entryLink import="true" name="Dagger" hidden="false" id="74fa-7181-c5a3-4e04" collective="false" targetId="64e0-0bb6-542b-4beb" type="selectionEntry" sortIndex="2"/>
@@ -1536,7 +1536,7 @@ Cossacks are subject to Hatred against all forces of Chaos (eg. members of any w
                 </modifier>
               </modifiers>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Missile Weapons" id="a8c6-2260-9e3a-ee75" hidden="false" sortIndex="2">
+            <selectionEntryGroup name="Missile Weapons" id="a8c6-2260-9e3a-ee75" hidden="false" sortIndex="2" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Bow" hidden="false" id="1537-a82b-9d3a-df3d" collective="false" targetId="311a-bf3f-67ff-46e7" type="selectionEntry" sortIndex="3">
                   <constraints>
@@ -1746,9 +1746,9 @@ The warrior receives a +1 on his &apos;to hit&apos; roll with the handgun, as lo
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Streltsi)" hidden="false" id="4256-05b6-1a10-fa03" sortIndex="5" collapsible="true">
+        <selectionEntry type="upgrade" import="true" name="Starting Equipment (Streltsi)" hidden="false" id="4256-05b6-1a10-fa03" sortIndex="5" collapsible="false">
           <selectionEntryGroups>
-            <selectionEntryGroup name="Armour" id="4980-2eb4-eec4-d68f" hidden="false" sortIndex="3">
+            <selectionEntryGroup name="Armour" id="4980-2eb4-eec4-d68f" hidden="false" sortIndex="3" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Helmet" hidden="false" id="7d66-d94f-5359-22ef" collective="false" targetId="d0e5-ca89-5f0d-f5d2" type="selectionEntry" sortIndex="5">
                   <constraints>
@@ -1759,7 +1759,7 @@ The warrior receives a +1 on his &apos;to hit&apos; roll with the handgun, as lo
                 <entryLink import="true" name="Light Armour" hidden="false" id="8fc1-4ae0-c4c4-378f" type="selectionEntry" targetId="3d2a-426a-c350-2a03" sortIndex="1"/>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Hand-to-hand Weapons" id="3ba7-40ec-a98a-845a" hidden="false" sortIndex="1">
+            <selectionEntryGroup name="Hand-to-hand Weapons" id="3ba7-40ec-a98a-845a" hidden="false" sortIndex="1" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Mace" hidden="false" id="3eda-da6c-169e-e617" collective="false" targetId="2cbb-013b-3ebf-0459" type="selectionEntry" sortIndex="3"/>
                 <entryLink import="true" name="Dagger" hidden="false" id="a765-8d62-08d0-80c1" collective="false" targetId="64e0-0bb6-542b-4beb" type="selectionEntry" sortIndex="2"/>
@@ -1783,7 +1783,7 @@ The warrior receives a +1 on his &apos;to hit&apos; roll with the handgun, as lo
                 </modifier>
               </modifiers>
             </selectionEntryGroup>
-            <selectionEntryGroup name="Missile Weapons" id="8ee9-eb74-2126-7161" hidden="false" sortIndex="2">
+            <selectionEntryGroup name="Missile Weapons" id="8ee9-eb74-2126-7161" hidden="false" sortIndex="2" collapsible="true">
               <entryLinks>
                 <entryLink import="true" name="Bow" hidden="false" id="0e68-22e9-86da-70e5" collective="false" targetId="311a-bf3f-67ff-46e7" type="selectionEntry" sortIndex="1">
                   <constraints>
@@ -1931,46 +1931,6 @@ If any of these results are rolled for the Bear Tamer, treat the result as a &ap
         <cost name="pts" typeId="points" value="125"/>
         <cost name="Warband Rating" typeId="wb-rating" value="5"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry id="fd14-8b66-a0b8-ae76" name="Stash" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="5138-8d79-c8e5-7127" type="min"/>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b8e2-44d9-af31-f882" type="max"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="09a2-73bd-34f9-5a15" name="Stash" hidden="false" targetId="a31acb39-8ce9-d6d7-bcc9-f3144d63db48" primary="true"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink id="5a62-1c52-6bb8-add3" name="Wyrdstone" hidden="false" collective="false" import="true" targetId="60f8-e6e7-c2ea-0dad" type="selectionEntry"/>
-        <entryLink import="true" name="Variable Gold Cost" hidden="false" id="41f2-8219-cc42-a0ac" collective="false" targetId="deca-5737-6234-23a1" type="selectionEntry">
-          <modifiers>
-            <modifier type="set" value="Gold" field="name"/>
-          </modifiers>
-        </entryLink>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-        <cost name="Warband Rating" typeId="wb-rating" value="0"/>
-      </costs>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Trading Post" hidden="false" id="0638-1780-ee12-fa9b" collective="false">
-          <constraints>
-            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="9e89-cdc6-bbe7-1fc5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fa59-3762-4f9f-2492" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <entryLinks>
-            <entryLink import="true" name="Equipment" hidden="false" id="2a26-56c7-7e17-e0ea" collective="false" targetId="2247-1f56-bc59-0ead" type="selectionEntryGroup"/>
-          </entryLinks>
-          <costs>
-            <cost name=" gc" typeId="points" value="0"/>
-            <cost name=" Warband Rating" typeId="wb-rating" value="0"/>
-            <cost name=" Rarity" typeId="rarity" value="0"/>
-          </costs>
-          <modifiers>
-            <modifier type="set" value="Equipment" field="name"/>
-          </modifiers>
-        </selectionEntry>
-      </selectionEntries>
     </selectionEntry>
   </selectionEntries>
   <rules>
